@@ -1,0 +1,58 @@
+/* 
+
+Bodyt joka sivulle(kaikille sivuille sama):
+*/
+font-style: normal;
+font-family: "Times New Roman", Times, serif;
+font-size: 25px;
+font-weight: 500;
+
+
+/*
+#0F66A8  footer nav background ehdotus
+#F05A56  
+#3EA2F0  background color ehdotus
+#ECF026
+#A1A322 
+VARIKOODIT 
+*/
+
+
+
+body{
+    background-color: #3EA2F0;
+}
+
+
+footer{
+    background-color: #ECF026;
+}
+
+/* .row {
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 5px;
+    gap:10px;
+    margin: 5px;
+    padding: 5px;
+} */
+.col {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #0f66a8b5;
+    margin: 30px;
+}
+.row4 {
+    height: 100px;
+    width: 70%;
+    position: relative;
+
+}
+.offcanvas-body a{
+    font-weight: bold;
+    color: red;
+}
+
+.offcanvas{
+    background: #3ef08b;
+}
