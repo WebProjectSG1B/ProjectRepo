@@ -1,12 +1,24 @@
-/* 
+ /* 
 
 Bodyt joka sivulle(kaikille sivuille sama):
 */
-font-style: normal;
-font-family: "Times New Roman", Times, serif;
-font-size: 25px;
+@font-face {
+    font-family: "Sono";
+    src: url(/ProjectRepo/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
+}
+body {
+font-family: "Sono";
 font-weight: 500;
-
+background-image: url(/ProjectRepo/Pages/Images/black-g4ec6f0509_1920.jpg);
+color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+h1 {
+    text-align: center;
+}
 /*  */
 /*
 #0F66A8  footer nav background ehdotus
@@ -20,7 +32,7 @@ VARIKOODIT
 
 
 body{
-    background-color: #3EA2F0;
+    background-color: #3ea3f0;
 }
 
 
@@ -36,23 +48,21 @@ footer{
     margin: 5px;
     padding: 5px;
 } */
-.col {
+.col, .col-4 {
     border: 2px solid black;
     border-radius: 5px;
-    background-color: #0f66a8b5;
+    background-color: #0f66a8;
     margin: 30px;
 }
+
 .row4 {
-    height: 100px;
-    width: 70%;
-    position: relative;
-
+    justify-content: center;
 }
-.offcanvas-body a{
-    font-weight: bold;
-    color: red;
-}
-
 .offcanvas{
-    background: #3ef08b;
+    background-image: url(/ProjectRepo/Pages/Images/workplace-g4e36d3dde_1920.jpg);
+    background-size: cover;
+    color: black;
+}
+.offcanvas h4 {
+    color: black;
 }
