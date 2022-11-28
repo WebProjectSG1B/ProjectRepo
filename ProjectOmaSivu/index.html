@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/style.css">
     <script src="indexscript.js" defer> </script>
+    <script src="/script.js" defer></script>
     
 </head>
 <body>
@@ -50,17 +51,20 @@
             <!-- Off canvas menu button loppuu -->
             <!-- Questions alkaa -->
             <div class="container quiz-container " >
-                <div class="question-container hidden">Question</div>
-               <div class="row answer-row hidden ">
-                    <div class="col answer-div" > Vastaus 1</div>
-                    <div class="col answer-div"> Vastaus 2</div>
+                <div id="question-container" class="question-container hidden">Question</div>
+                <div id="answer-container">
+                <div class="row answer-row answer-row1 hidden" id="answer-row1">
+
+                    <div class="col answer-div"></div>
+                    <div class="col answer-div"> </div>
                     
                </div>
             
-               <div class="row answer-row hidden">
-                <div class="col answer-div"> Vastaus 3 </button></div>
-                <div class="col answer-div"> Vastaus 4 </button></div>
+               <div class="row answer-row hidden" id="answer-row2">
+                <div class="col answer-div">  </div>
+                <div class="col answer-div"> </div>
                </div>
+            </div>
                 <div class="button-row">
                     <button id="start-button" class="">Aloita</button>
                     <button id="next-button" class="hidden">Seuraava</button>
@@ -68,7 +72,7 @@
                </div>
               
             </div>
-            <div class="row col " id="explanation-div">Tähän tulee selitys</div>
+            <div class="row col hidden" id="explanation-div">Tähän tulee selitys</div>
 
         </div>
 
