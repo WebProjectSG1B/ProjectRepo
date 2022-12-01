@@ -1,53 +1,50 @@
  /* 
+YLEINEN TYYLITTELY ALKAA
 
-Bodyt joka sivulle(kaikille sivuille sama):
+VÄRIKOODIT 
+#0F66A8  footer nav background ehdotus
+#F05A56  
+#3EA2F0  background color ehdotus
+#ECF026
+#A1A322 
+
 */
 @font-face {
     font-family: "Sono";
     src: url(/ProjectRepo/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
 }
 body {
-font-family: "Sono";
-font-weight: 500;
-background-image: url(/ProjectRepo/Pages/Images/black-g4ec6f0509_1920.jpg);
-color: white;
+    font-family: "Sono";
+    font-weight: 500;
+    background-image: url(/ProjectRepo/Pages/Images/black-g4ec6f0509_1920.jpg);
+    color: white;
+
 }
 a {
     text-decoration: none;
     color: white;
 }
-h1 {
+h1, p {
     text-align: center;
 }
-/*  */
-/*
-#0F66A8  footer nav background ehdotus
-#F05A56  
-#3EA2F0  background color ehdotus
-#ECF026
-#A1A322 
-VARIKOODIT 
-*/
 
-
-
-body{
-    background-color: #3ea3f0;
-}
-
-
-footer{
-    background-color: #ECF026;
-}
-
-/* .row {
-    background-color: red;
+.col {
     border: 2px solid black;
     border-radius: 5px;
-    gap:10px;
-    margin: 5px;
-    padding: 5px;
-} */
+    background-color: #0f66a8;
+    margin: 30px;
+}
+.offcanvas{
+    background-image: url(/ProjectRepo/Pages/Images/workplace-g4e36d3dde_1920.jpg);
+    background-size: cover;
+    color: black;
+}
+.offcanvas h4 {
+    color: black;
+}
+/* YLEINEN TYYLITTELY PÄÄTTYY */
+
+/* INDEXIN TYYLIT */
 .col, .col-4 {
     border: 2px solid black;
     border-radius: 5px;
@@ -58,11 +55,6 @@ footer{
 .row4 {
     justify-content: center;
 }
-.offcanvas{
-    background-image: url(/ProjectRepo/Pages/Images/workplace-g4e36d3dde_1920.jpg);
-    background-size: cover;
-    color: black;
-}
-.offcanvas h4 {
-    color: black;
-}
+
+
+
