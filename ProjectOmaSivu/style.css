@@ -69,12 +69,15 @@ body.wrong{
 
 
 #explanation-div{
-    background-color: #3EA2F0;
+    background-color: #0f66a8b5;
     justify-content: center;
 }
 
+
+
 .answer-div:hover,#start-button:hover, #next-button:hover{
     filter: brightness(85%);
+    cursor: pointer;
 }
 
 
