@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- aaaa -->
+
     <!-- TODO
         Nav sidebar mobiili responsiivisuus
         Kuvat
@@ -17,8 +17,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="styles-sepi.css">
-    <script src="script.js" defer> </script>
+    <link rel="stylesheet" href="/Styles/style.css">
+    <script src="indexscript.js" defer> </script>
     
 </head>
 <body>
@@ -27,8 +27,6 @@
         <div class="container text-center">
             <div class="row row1 text-start">
                 <div class="col col1">
-                    <h1>Matikan tehtäviä</h1>
-                    <p>Alla löydät eri tyyppisiä matikan tehtäviä jotka on tarkoitettu kuudennen luokan oppilaille.</p>
             <!-- Off canvas menu button -->
     <i id="menubutton" class="bi-list"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"></i>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
@@ -51,26 +49,33 @@
             </div>
             </div>
             <div class="row row2">
-                <div class="col col-3 links">
-                  <a href=""><img src="/Pages/Severi Jokelainen/Images/one-hundred-gfdf010b00_1920.jpg" alt="percent">
-                    <p>PROSENTTILASKUJA</p>
-                  </a>
+                <div class="col col2">
+                    INFOTEKSTI
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus eligendi accusantium atque voluptate, reprehenderit reiciendis voluptatum velit! Rem eaque vero, cum, dolorem iste, eius ipsum labore harum perferendis minima doloremque.</p>
+                    </div>
                 </div>
-                <div class="col col-3 links">
-                 <a href=""><img src="Images/pi-ga89b7ec16_1920.jpg" alt="decimal">
-                  <p>MURTOLUVUT JA DESIMAALIT</p>
-                  </a>
+            </div>
+            <div class="row row3">
+                <div class="col col3">
+                    <a href="/Pages/MattiP/matti.html">1- 2. Luokkalaiset</a>
+                </div>
+                <div class="col col3">
+                    3. Luokkalaiset
+                </div>
+                <div class="col col3">
+                    4. Luokkalaiset
                 </div>
               </div>
-                <div class="row row3">
-                  <div class="col col-3 links">
-                   <a href=""><img src="Images/calculator-gacfde29c1_1920.jpg" alt="calculus">
-                    <p>LASKUTOIMITUKSIA</p>
-                  </a>
-                 </div>
+              <div class="row row4">
+                <div class="col col4">
+                    5. Luokkalaiset
+                </div>
+                <div class="col col4">
+                    6. Luokkalaiset
+                  </div>
               </div>
               <div class="row row5">
-                <div class="col col1">
+                <div class="col col5">
                   FOOTER
                 </div>
               </div>
@@ -80,3 +85,65 @@
  
 </body> 
 </html>
+
+
+
+
+/* 
+
+Bodyt joka sivulle(kaikille sivuille sama):
+*/
+font-style: normal;
+font-family: "Times New Roman", Times, serif;
+font-size: 25px;
+font-weight: 500;
+
+
+/*
+#0F66A8  footer nav background ehdotus
+#F05A56  
+#3EA2F0  background color ehdotus
+#ECF026
+#A1A322 
+VARIKOODIT 
+*/
+
+
+
+body{
+    background-color: #3EA2F0;
+}
+
+
+footer{
+    background-color: #ECF026;
+}
+
+/* .row {
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 5px;
+    gap:10px;
+    margin: 5px;
+    padding: 5px;
+} */
+.col {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #0f66a8b5;
+    margin: 30px;
+}
+.row4 {
+    height: 100px;
+    width: 70%;
+    position: relative;
+
+}
+.offcanvas-body a{
+    font-weight: bold;
+    color: red;
+}
+
+.offcanvas{
+    background: #3ef08b;
+}
