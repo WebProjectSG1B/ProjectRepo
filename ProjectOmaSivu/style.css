@@ -16,8 +16,14 @@ font-weight: 500; */
 #A1A322 
 VARIKOODIT 
 */
-
-
+#number-of-right-answers{
+    text-align: center;
+}
+#counter{
+    width: fit-content;
+    display: flex;
+    position: relative; left: 95%; top: 10px;
+}
 
 body{
     background-color: #3EA2F0;
