@@ -1,3 +1,4 @@
+// Author: Samuli Ruotsalainen
 // Muuttujat jotka hakevat tarvitut elementit
 
 let startButton = document.getElementById('start-button');
@@ -21,71 +22,72 @@ let rightAnswerDiv = document.getElementById('number-of-right-answers')
 */
 
 
-/* Array joka sisältää kysymykset, vastaukset, sekä selitykset*/
+/* Array joka sisältää kysymykset, vastaukset, sekä selitykset
+*/
 const questions = [
     {
-        kysymys: 'Testikysymys',
+        kysymys: 'Mikä on hätäpalvelun numero kaikissa EU-maissa?',
         vastaukset: [
-            {text: '1', correct: true},
-            {text: '2', correct: false},
-            {text: '2', correct: false},
-            {text: '2', correct: false}
+            {text: '112', correct: true},
+            {text: '10022', correct: false},
+            {text: '911', correct: false},
+            {text: '1212', correct: false}
         ],
-        vinkit: 'Tämä oli oikein, koska x'
+        vinkit: 'Hätäpalvelun numero kaikissa EU-maissa on ollut "112" vuodesta 2008 lähtien'
     },
     {
-        kysymys: 'Testikysymys 2',
+        kysymys: 'Mikä on Slovakian rahayksikkö?',
         vastaukset:[
-            {text: '3', correct: false},
-            {text: '4', correct: true},
-            {text: '2', correct: false},
-            {text: '2', correct: false}
+            {text: 'Kruunu', correct: false},
+            {text: 'Markka', correct: false},
+            {text: 'Euro', correct: true},
+            {text: 'Lati', correct: false}
         ],
         vinkit: 
-           'Tämä oli oikein, koska b'
+           'Slovakia käyttää rahayksikkönään euroja.'
     },
     {
-        kysymys: 'Testikysymys 3',
+        kysymys: 'Missä kaupungissa on YK:n kansainvälisen rikostuomioistuimen päämaja?',
         vastaukset:[
-            {text: '3', correct: true},
-            {text: '4', correct: false},
-            {text: '2', correct: true},
-            {text: '2', correct: false}
+            {text: 'Roomassa', correct: false},
+            {text: 'Tukholmassa', correct: false},
+            {text: 'Haagissa', correct: true},
+            {text: 'Prahassa', correct: false}
         ],
-        vinkit: 'Tämä oli oikein, koska a'
+        vinkit: 'YK:n kansainvälisen rikostuomioistuimen päämaja sijaitsee Haagissa, joka on kaupunki Hollannissa.'
     },
     {
-        kysymys: 'Testikysymys 4',
+        kysymys: 'Mikä on Euroopan suurin tulivuori?',
         vastaukset:[
-            {text: '3', correct: false},
-            {text: '4', correct: false},
-            {text: '2', correct: false},
-            {text: '2', correct: true}
+            {text: 'Vulcano', correct: false},
+            {text: 'Vesuvius', correct: false},
+            {text: 'Santorini', correct: false},
+            {text: 'Etna', correct: true}
         ],
-        vinkit: 'Tämä oli oikein, koska z'
+        vinkit: 'Etna on Euroopan suurin tulivuori. Se sijaitsee Italiassa ja on 3357m korkea'
 
     },
     {
-        kysymys: 'Testikysymys 5',
+        kysymys: 'Mikä on belgian pääkaupunki?',
         vastaukset:[
-            {text: '3', correct: false},
-            {text: '2', correct: false},
-            {text: '2', correct: true},
-            {text: '4', correct: false}
+            {text: 'Antwerpen', correct: false},
+            {text: 'Bryssel', correct: true},
+            {text: 'Toronto', correct: false},
+            {text: 'Havanna', correct: false}
         ],
-        vinkit: 'Tämä oli oikein, koska y'
+        vinkit: 'Brysselistä tuli belgian pääkaupunki vuonna 1831.'
 
     }
 ];
 
 /* Laskurit, jotka sisältävät kysymyksen numeron, ja estävät aikaisemmin esitettyjen kysymysten
 Esittämisen*/ 
-
 let shuffledQuestion;
 let currentQuestionNumber;
 let questionsAmount = questions.length;
 let questionsAnswered = 1;
-let rightAnswers = 0
+let rightAnswers = 0;
+let clicked = false;
 //Event listenerit aloitus ja seuraava napille
  startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -113,18 +115,16 @@ function startGame(){
     showQuestion funktiolla. */
 function nextQuestion(){   
     resetDivs()
+    clicked = false;
     showQuestion(shuffledQuestion[currentQuestionNumber])
-    
     answerCounter.innerText = questionsAnswered + "/" + questionsAmount;
     questionsAnswered++
+    console.log(questionsAnswered);
+    console.log(rightAnswers);
     if (questionsAnswered > 5) {
         questionsAnswered = 1
-        // rightAnswers = 0
     };
-  
-    console.log(rightAnswers + "vastaukset");
-    console.log(questionsAnswered + "kysymykset");
-}
+};
 
 /* Poistaa olemessaolevat vastausvaihtoehto divit */
 function resetDivs(){
@@ -145,7 +145,7 @@ function showQuestion(kysymys) {
      kysymys.vastaukset.forEach(vastaukset => {
             if(i<2){
             const div = document.createElement('div');
-            div.classList.add('col', 'answer-div');
+            div.classList.add('col', 'answer-div', 'text-center');
             div.innerText = vastaukset.text
             answerRow1.appendChild(div)
             if(vastaukset.correct === true) {
@@ -154,7 +154,7 @@ function showQuestion(kysymys) {
             i++
         } else {
             const div = document.createElement('div');
-            div.classList.add('col', 'answer-div');
+            div.classList.add('col', 'answer-div', 'text-center');
             div.innerText = vastaukset.text
            answerRow2.appendChild(div)
            if(vastaukset.correct === true) {
@@ -172,7 +172,6 @@ function showQuestion(kysymys) {
     näkyvyys luokkia sen mukaan, onko kysymyksiä enään jäljellä. Esittää selitys divin käyttäjälle. */
 /** @param {event} event */
 function pickAnswer(event) {
-  
 
     Array.from(answerRow1.children).forEach((div) => setClass(div, div.dataset.correct));
     Array.from(answerRow2.children).forEach((div) => setClass(div, div.dataset.correct));
@@ -182,13 +181,11 @@ function pickAnswer(event) {
     let pickedAnswerClasslist = pickedAnswer.classList;
     let pickedAnswerArrayList = Array.from(pickedAnswerClasslist);
     
-     if (pickedAnswerArrayList.includes('correct') == true){
+     if (pickedAnswerArrayList.includes('correct') == true && clicked == false) {
         rightAnswers++
-       
-    };
-
-
-
+        clicked = true
+     };
+    
 
     if (shuffledQuestion.length > currentQuestionNumber + 1){
         nextButton.classList.remove('hidden');
@@ -198,9 +195,9 @@ function pickAnswer(event) {
       
         rightAnswerDiv.classList.remove('hidden');
         rightAnswerDiv.innerText = ('Sait ' + rightAnswers + ' kysymystä oikein!')
-    }
-}
-
+    };
+};
+   
 
 /* Parametri tarkistaa, onko elementillä dataset arvo correct. Jos true, antaa 
     elementille luokan correct, muuten luokan wrong. Luokille on määritelty värit CSS
@@ -211,12 +208,8 @@ function setClass (element, correct) {
     } else {
         element.classList.add("wrong")
     }
-}
+};
 
 
-/* Tyhjentää yllä olevan elementin luomat luokat kun kysymys vaihtuu */
-function clearClass (element) {
-    element.classList.remove("correct");
-    element.classList.remove("wrong");
-}
+
 

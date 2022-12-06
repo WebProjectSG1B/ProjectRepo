@@ -16,6 +16,43 @@ font-weight: 500; */
 #A1A322 
 VARIKOODIT 
 */
+
+/* Yleinen Tyylittely */
+@font-face {
+    font-family: "Sono";
+    src: url(/ProjectRepo/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
+}
+.offcanvas{
+    background-image: url(/Images/workplace-g4e36d3dde_1920.jpg);
+    background-size: cover;
+    color: black;
+}
+
+body {
+    font-family: "Sono";
+    font-weight: 500;
+    background-image: url(/Images/black-g4ec6f0509_1920.jpg);
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+h1, p {
+    text-align: center;
+}
+.col {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #0f66a8b5;
+    margin: 2%;
+}
+.offcanvas h4 {
+    color: black;
+}
+
+/* */
+
 #number-of-right-answers{
     text-align: center;
 }
@@ -25,23 +62,16 @@ VARIKOODIT
     position: relative; left: 95%; top: 10px;
 }
 
-body{
-    background-color: #3EA2F0;
-}
 
-body.correct{
-    background-color: #3ef08b;
-}
 
-body.wrong{
-    background-color: #FE2020;
-}
+
 
 .quiz-container{
     background-color: #0f66a8b5;
     border: 2px solid black;
     border-radius: 5px;
 }
+
 
 
 
@@ -54,6 +84,7 @@ body.wrong{
     border: 2px solid black;
     border-radius: 5px;
     margin: 2%;
+    color: black;
 }
 
 .answer-div.wrong{
@@ -63,12 +94,14 @@ body.wrong{
     background-color: #3ef08b !important;
 }
 
+
 #start-button, #next-button{
     border: 2px solid black;
     background-color: #3EA2F0;
     border-radius: 5px;
     width: max-content;
-    margin: 5px;
+    margin-top: 2%;
+    margin-left: 1%;
 }
 
 
@@ -88,34 +121,3 @@ body.wrong{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-footer{
-    background-color: #ECF026;
-}
-
-.col {
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: #0f66a8b5;
-    margin: 2%;
-}
-
-.offcanvas-body a{
-    font-weight: bold;
-    color: red;
-}
-
-.offcanvas{
-    background: #3ef08b;
-}
