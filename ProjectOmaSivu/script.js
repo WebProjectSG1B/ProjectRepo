@@ -1,4 +1,9 @@
 // Author: Samuli Ruotsalainen
+/* Referoitu apuna seuraavia koodeja:
+    https://github.com/WebDevSimplified/JavaScript-Quiz-App
+    https://www.section.io/engineering-education/how-to-build-a-quiz-app-with-vanilla-javascript-and-tailwind-css/
+    Sekä erilaisia ratkaisumalleja/ohjeistuksia stackoverflowsta/www3schoolssista
+    */
 // Muuttujat jotka hakevat tarvitut elementit
 
 let startButton = document.getElementById('start-button');
