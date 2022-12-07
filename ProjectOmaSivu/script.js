@@ -4,6 +4,7 @@
 let startButton = document.getElementById('start-button');
 let questionContainer = document.querySelector('.question-container');
 let nextButton = document.getElementById('next-button');
+let quizContainer = document.getElementById('quiz-container');
 let answerRows = document.querySelectorAll('div.answer-row');
 let answerRow1 =  document.getElementById('answer-row1')
 let answerRow2 =  document.getElementById('answer-row2')
@@ -12,13 +13,16 @@ let answerDiv = document.getElementsByClassName('answer-div');
 let explanationDiv = document.getElementById('explanation-div');
 let answerCounter= document.getElementById('counter');
 let rightAnswerDiv = document.getElementById('number-of-right-answers')
+let introDiv = document.getElementById('intro-div')
 // TODO
 // NO VITTU VAIKKA KAIKKI SAATANA
 /* 
     5.12. [Luo asettelut kuntoon. Kosmetikka hoitoa, kaikki funktionaalinen toimii tarkoituksen mukaisesti.
     Luo sisällöt kysymyksille]
-    Ala työstämään asettelua ja kysymysten sisältöä.   
-    Peli pääasiallisesti toimii tarkoituksen mukaisesti.
+    7.12. [Luotu +7 kysymystä, yhteensä 12. Halutessaan voi tehdä lisää.
+        Korjattu laskuri, peli toimii nyt täydellisesti. Ainoa backendin todo lisätä kysymyksiä
+        Frontendi kaipaa vielä hiomista, mutta kaiken tälläpuolella *pitäisi* toimia. 
+    ]
 */
 
 
@@ -76,7 +80,86 @@ const questions = [
             {text: 'Havanna', correct: false}
         ],
         vinkit: 'Brysselistä tuli belgian pääkaupunki vuonna 1831.'
-
+    },
+    {
+        kysymys: 'Minä vuonna Iso-Britannia tunnusti Suomen itsenäiseksi valtioksi?',
+        vastaukset:[
+            {text: '1939', correct:false},
+            {text: '1929', correct:false},
+            {text: '1919', correct:true},
+            {text: '1949', correct:false}
+        ],
+        vinkit: 'Suomi itsenäistyi vuonna 1918, ja Iso-Britannia tunnisti Suomen itsenäiseksi seuraavana vuonna.'
+    },
+    {
+        kysymys: 'Mitä tarkoittaa Euroopan historiassa sana D-Day?',
+        vastaukset:[
+            {text: 'Normandian maihinnousua', correct:true},
+            {text: 'Mussolinin kuolinpäivää', correct:false},
+            {text: 'Enigma-laitetta', correct:false},
+            {text: 'EU:n vuosipäivää', correct:false}
+        ],
+        vinkit: 'D-Day:llä merkitään Normandian maihinnousua, joka tapahtui 6. kesäkuuta 1944.'
+    },
+    {
+        kysymys: 'Millä maalla on eniten paikkoja europarlamentissa?',
+        vastaukset:[
+            {text: 'Italialla', correct:false},
+            {text: 'Saksalla', correct:true},
+            {text: 'Puolalla', correct:false},
+            {text: 'Ranskalla', correct:false}
+        ],
+        vinkit: 'Saksalla on euroarlamentissä eniten paikkoja, sillä sen väkiluku on EU -maista suurin.'
+    },
+    {
+        kysymys: 'Mitkä ovat Euroopan unionin lipun värit?',
+        vastaukset:[
+            {text: 'Sininen', correct:false},
+            {text: 'Vihreä ja keltainen', correct:false},
+            {text: 'Sininen ja keltainen', correct:true},
+            {text: 'Punainen ja keltainen', correct:false}
+        ],
+        vinkit: 'Euroopan unionin lipun värit ovat Sininen ja keltainen.'
+    },
+    {
+        kysymys: 'Mille maalle kuuluvat Shetlannin saaret?',
+        vastaukset:[
+            {text: 'Alankomaille', correct:false},
+            {text: 'Ruotsaille', correct:false},
+            {text: 'Ranskalle', correct:false},
+            {text: 'Isolle-Britannialle', correct:true}
+        ],
+        vinkit: 'Shetlannin saaret sijaitsevat Iso-Britannian saarten pohjoispuolella, ja ovat kuuluneet Iso-Britannialle vuodesta 1472.'
+    },
+    {
+    kysymys: 'Minkä meren rannikolla Monaco sijaitsee?',
+    vastaukset:[
+        {text: 'Välimeren', correct:true},
+        {text: 'Jäämeren', correct:false},
+        {text: 'Intian valtameren', correct:false},
+        {text: 'Punaisen meren', correct:false}
+    ],
+    vinkit: 'Monaco on itsenäinen kääpiövaltio, joka sijaitsee välimeren rannalla, lähellä Ranskan ja Italian pohjoista rajaa.'
+    },
+    {
+    kysymys: 'Minkä EU-maan pääkaupunki on Pariisi?',
+    vastaukset:[
+        {text: 'Suomen', correct:false},
+        {text: 'Ruotsin', correct:false},
+        {text: 'Ranskan', correct:true},
+        {text: 'Espanjan', correct:false}
+    ],
+    vinkit: 'Pariisi on Ranskan pääkaupunki vuodesta 508 lähtien.'
+    },
+    {
+    kysymys: 'Mikä seuraavista ei ole Belgian naapurimaa?',
+    vastaukset:[
+        {text: 'Tanska', correct:true},
+        {text: 'Alankomaat', correct:false},
+        {text: 'Luxemburg', correct:false},
+        {text: 'Ranska', correct:false}
+    ],
+    vinkit: 'Tanskalla ja Belgialla ei ole yhteistä maa- tai merirajaa, jonka vuoksi Tanska ei ole Belgian naapurimaa.'
     }
 ];
 
@@ -84,8 +167,8 @@ const questions = [
 Esittämisen*/ 
 let shuffledQuestion;
 let currentQuestionNumber;
-let questionsAmount = questions.length;
-let questionsAnswered = 1;
+let questionsAmount = 5;
+let questionsAnswered = 0;
 let rightAnswers = 0;
 let clicked = false;
 //Event listenerit aloitus ja seuraava napille
@@ -102,10 +185,13 @@ nextButton.addEventListener('click', () => {
 function startGame(){
     startButton.classList.add('hidden');
     answerCounter.classList.remove('hidden');
+    quizContainer.classList.remove('transparent');
+    introDiv.classList.add('hidden')
     answerRows.forEach(answerRows => answerRows.classList.remove('hidden')
     )
     currentQuestionNumber = 0;
     rightAnswers = 0;
+    questionsAnswered = 0;
     rightAnswerDiv.classList.add('hidden');
     shuffledQuestion=questions.sort(() => Math.random() - 0.5);
     nextQuestion();
@@ -118,12 +204,16 @@ function nextQuestion(){
     clicked = false;
     showQuestion(shuffledQuestion[currentQuestionNumber])
     answerCounter.innerText = questionsAnswered + "/" + questionsAmount;
-    questionsAnswered++
-    console.log(questionsAnswered);
-    console.log(rightAnswers);
-    if (questionsAnswered > 5) {
+    if (questionsAnswered == 0) {
+        answerCounter.innerText = '1/'+ questionsAmount;
+        questionsAnswered++
+    }
+    if (questionsAnswered > questionsAmount) {
         questionsAnswered = 1
     };
+    questionsAnswered++
+
+    
 };
 
 /* Poistaa olemessaolevat vastausvaihtoehto divit */
@@ -185,9 +275,8 @@ function pickAnswer(event) {
         rightAnswers++
         clicked = true
      };
-    
 
-    if (shuffledQuestion.length > currentQuestionNumber + 1){
+    if (questionsAnswered < 6){
         nextButton.classList.remove('hidden');
     } else {
         startButton.innerText = "Pelaa uudelleen";

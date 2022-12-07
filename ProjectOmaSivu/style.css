@@ -23,7 +23,7 @@ VARIKOODIT
     src: url(/ProjectRepo/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
 }
 .offcanvas{
-    background-image: url(/Images/workplace-g4e36d3dde_1920.jpg);
+    background-image: url(/ProjectRepo/Images/workplace-g4e36d3dde_1920.jpg);
     background-size: cover;
     color: black;
 }
@@ -31,7 +31,8 @@ VARIKOODIT
 body {
     font-family: "Sono";
     font-weight: 500;
-    background-image: url(/Images/black-g4ec6f0509_1920.jpg);
+    background-image: url(/ProjectRepo/Images/black-g4ec6f0509_1920.jpg);
+    
     color: white;
 }
 a {
@@ -104,7 +105,10 @@ h1, p {
     margin-left: 1%;
 }
 
-
+.transparent{
+    background-color: transparent;
+    border: none;
+}
 
 
 #explanation-div{

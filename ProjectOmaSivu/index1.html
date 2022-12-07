@@ -17,10 +17,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="Styles/style.css">
-    <link rel="stylesheet" href="/ProjectOmaSivu/style.css">
+    <link rel="stylesheet" href="/ProjectRepo/Styles/style.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="indexscript.js" defer> </script>
-    <script src="/ProjectOmaSivu/script.js" defer></script>
+    <script src="./script.js" defer></script>
     
 </head>
 <body>
@@ -52,9 +52,14 @@
         </div>
          </div>
             <!-- Off canvas menu button loppuu -->
-        
+            <div class="row row2" id="intro-div">
+                <div class="col col2">
+                       <p> Tervetuloa pelaamaan Eurooppa visaa!</p>
+                       <p> Visa testaa Eurooppa -tietojen taitojasi erilaisilla visaisilla Eurooppa-teemaisilla kysymyksillä! Paina Aloita -nappia aloittaaksesi peli!</p>
+                </div>
+            </div>
          <!-- Questions alkaa -->
-         <div class="container quiz-container " >
+         <div class="container quiz-container transparent" id="quiz-container" >
             <div id="question-container" class="question-container text-center hidden">Question</div>
          
             <div id="answer-container">
@@ -70,7 +75,7 @@
             <div class="col answer-div"> </div>
            </div>
         </div>
-            <div class="button-row">
+            <div class="button-row text-center">
                 <button id="start-button" class="">Aloita</button>
                 <button id="next-button" class="hidden">Seuraava</button>
                 <p id="number-of-right-answers" class="hidden"></p>
