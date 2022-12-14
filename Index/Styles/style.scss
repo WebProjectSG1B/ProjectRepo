@@ -20,20 +20,20 @@ VÄRIKOODIT
 body {
     font-family: "Sono";
     font-weight: 500;
-    background-image: url(/Images/black-g4ec6f0509_1920.jpg);
+    background-image: url(/Index/Images/black-g4ec6f0509_1920.jpg);
     color: white;
     width: 99vw;
 }
 #nomargin{
     margin: 0;
-    background-image: url(/Images/puuHeader.jpg);
+    background-image: url(/Index/Images/puuHeader.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     text-decoration: underline;
     padding-top: 0.1vh;
 }
 #footer {
-    background-image: url(/Images/puuHeader.jpg);
+    background-image: url(/Index/Images/puuHeader.jpg);
     z-index: 0;
 }
 #menubutton {
@@ -58,7 +58,7 @@ h1, p {
     margin: 30px;
 }
 .offcanvas{
-    background-image: url(/Images/workplace-g4e36d3dde_1920.jpg);
+    background-image: url(/Index/Images/workplace-g4e36d3dde_1920.jpg);
     background-size: cover;
     color: black;
         h4{
