@@ -12,12 +12,12 @@ VÄRIKOODIT
 */
 @font-face {
   font-family: "Sono";
-  src: url(/ProjectRepo/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
+  src: url(/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
 }
 body {
   font-family: "Sono";
   font-weight: 500;
-  background-image: url(/ProjectRepo/Index/Images/black-g4ec6f0509_1920.jpg);
+  background-image: url(/Index/Images/black-g4ec6f0509_1920.jpg);
   color: white;
 }
 
@@ -37,7 +37,7 @@ h1, p {
 }
 
 .offcanvas {
-  background-image: url(/ProjectRepo/Index/Images/workplace-g4e36d3dde_1920.jpg);
+  background-image: url(/Index/Images/workplace-g4e36d3dde_1920.jpg);
   background-size: cover;
   color: black;
 }
