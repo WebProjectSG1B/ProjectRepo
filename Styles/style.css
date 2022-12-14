@@ -9,6 +9,10 @@ VÄRIKOODIT
 #A1A322 
 
 */
+
+.row{
+    height: 20vh;
+}
 @font-face {
     font-family: "Sono";
     src: url(/ProjectRepo/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
@@ -16,10 +20,14 @@ VÄRIKOODIT
 body {
     font-family: "Sono";
     font-weight: 500;
-    background-image: url(/ProjectRepo/Pages/Images/black-g4ec6f0509_1920.jpg);
+    background-image: url(/Images/black-g4ec6f0509_1920.jpg);
     color: white;
 
 }
+#nomargin{
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -29,13 +37,14 @@ h1, p {
 }
 
 .col {
+
     border: 2px solid black;
     border-radius: 5px;
     background-color: #0f66a8;
     margin: 30px;
 }
 .offcanvas{
-    background-image: url(/ProjectRepo/Pages/Images/workplace-g4e36d3dde_1920.jpg);
+    background-image: url(/Images/workplace-g4e36d3dde_1920.jpg);
     background-size: cover;
     color: black;
 }
@@ -51,10 +60,29 @@ h1, p {
     background-color: #0f66a8;
     margin: 30px;
 }
-
 .row4 {
     justify-content: center;
 }
 
-
-
+#navigaatio {
+    padding-bottom: 20vh;
+    width: 100vw;
+}
+#footer{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+.col5{
+    position: absolute;
+}
+#footer{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #0f66a8b5;
+    margin-bottom: 2px;
+    padding-left: 90vw;
+}
+h1{
+    padding-left: 0;
+}

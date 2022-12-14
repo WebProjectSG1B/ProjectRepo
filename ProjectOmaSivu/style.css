@@ -1,0 +1,120 @@
+/* 
+
+Bodyt joka sivulle(kaikille sivuille sama):
+*/
+/* font-style: normal;
+font-family: "Times New Roman", Times, serif;
+font-size: 25px;
+font-weight: 500; */
+
+/*  */
+/*
+#0F66A8  footer nav background ehdotus
+#F05A56  
+#3EA2F0  background color ehdotus
+#ECF026
+#A1A322 
+VARIKOODIT 
+*/
+
+/* Yleinen Tyylittely */
+@font-face {
+    font-family: "Sono";
+    src: url(/ProjectRepo/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
+}
+.offcanvas{
+    background-image: url(/Images/workplace-g4e36d3dde_1920.jpg);
+    background-size: cover;
+    color: black;
+}
+
+body {
+    font-family: "Sono";
+    font-weight: 500;
+    background-image: url(/Images/black-g4ec6f0509_1920.jpg);
+    
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+h1, p {
+    text-align: center;
+}
+.col {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #0f66a8b5;
+    margin: 2%;
+}
+.offcanvas h4 {
+    color: black;
+}
+
+/* */
+
+#number-of-right-answers{
+    text-align: center;
+}
+#counter{
+    width: fit-content;
+    display: flex;
+    position: relative; left: 95%; top: 10px;
+}
+
+
+
+
+
+.quiz-container{
+    background-color: #0f66a8b5;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.hidden{
+    display: none;
+}
+
+.answer-div{
+    background-color: #3EA2F0 !important;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 2%;
+    color: black;
+}
+
+.answer-div.wrong{
+    background-color: #FE2020 !important;
+}
+.answer-div.correct{
+    background-color: #3ef08b !important;
+}
+
+#start-button, #next-button{
+    border: 2px solid black;
+    background-color: #3EA2F0;
+    border-radius: 5px;
+    width: max-content;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.transparent{
+    background-color: transparent;
+    border: none;
+}
+
+#explanation-div{
+    background-color: #0f66a8b5;
+    justify-content: center;
+}
+
+.answer-div:hover,#start-button:hover, #next-button:hover{
+    filter: brightness(85%);
+    cursor: pointer;
+}
+
+
+
