@@ -4,34 +4,75 @@
 
 .links {
     height: 250px;
+    background: none;
     img {
         width: 100%;
         height: 100%;
+        border-radius: 10px;
     }
     &:hover {
         cursor: pointer;
-        color: #F05A56;
+        color: #3EA2F0;
     }
 }
 .col-4 {
     padding: 0px;
+    height: 40vh;
     p{
         position: relative;
         bottom: 98%;
     }
 }
 
-.footer {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-    flex-direction: row;
-        img {
-            width: 7%;
-            margin: 10px;
+.row2 {
+    justify-content: center;
+}
+
+#footer {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgba(15, 102, 168, 0.925);
+    margin-bottom: 2px;
+    margin-left: 0;
+    justify-content: center;
+    z-index: 0;
+  }
+
+#nomargin {
+  margin: 0;
+  padding-top: 0.1vh;
+}
+
+.carousel {
+  margin-top: 25vh;
+  font-size: large;
+  .carIcon{
+    height: 70px;
+    width: 70px;
+    background-color:#3EA2F0;
+    border-radius: 15px;
+  }
+  .carousel-indicators {
+    height: 5px;
+        // NÄÄ ON NE NAPIT
+        [data-bs-target]{ 
+            background-color: #3EA2F0;
+            border: 1px solid #3EA2F0;
+            border-radius: 5px;
+            height: 10px;
+            width: 40px;
         }
 }
+}
+
+
+
 @media screen and (max-width: 767px){
+    .links {
+        img {
+            display: none;
+        }
+    }
     .col-3 {
         width: 80%;
         height: auto;
@@ -43,8 +84,5 @@
         img {
             display: none;
         }
-    }
-    .footer img {
-        display: none;
     }
 }
