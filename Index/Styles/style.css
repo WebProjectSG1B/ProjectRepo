@@ -16,19 +16,19 @@ VÄRIKOODIT
 
 @font-face {
   font-family: "Sono";
-  src: url(/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
+  src: url(/ProjectRepo/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
 }
 body {
   font-family: "Sono";
   font-weight: 500;
-  background-image: url(/Images/black-g4ec6f0509_1920.jpg);
+  background-image: url(/ProjectRepo/Index/Images/black-g4ec6f0509_1920.jpg);
   color: white;
   width: 99vw;
 }
 
 #nomargin {
   margin: 0;
-  background-image: url(/Images/puuHeader.jpg);
+  background-image: url(/ProjectRepo/Index/Images/puuHeader.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-decoration: underline;
@@ -36,7 +36,7 @@ body {
 }
 
 #footer {
-  background-image: url(/Images/puuHeader.jpg);
+  background-image: url(/ProjectRepo/Index/Images/puuHeader.jpg);
   z-index: 0;
 }
 
@@ -64,7 +64,7 @@ h1, p {
 }
 
 .offcanvas {
-  background-image: url(/Images/workplace-g4e36d3dde_1920.jpg);
+  background-image: url(/ProjectRepo/Index/Images/workplace-g4e36d3dde_1920.jpg);
   background-size: cover;
   color: black;
 }

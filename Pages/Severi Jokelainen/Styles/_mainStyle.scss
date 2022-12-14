@@ -16,7 +16,7 @@ VÄRIKOODIT
 body {
     font-family: "Sono";
     font-weight: 500;
-    background-image: url(/ProjectRepo/Pages/Images/black-g4ec6f0509_1920.jpg);
+    background-image: url(/ProjectRepo/Index/Images/black-g4ec6f0509_1920.jpg);
     color: white;
 
 }
@@ -34,7 +34,7 @@ h1, p {
     margin: 30px;
 }
 .offcanvas{
-    background-image: url(/ProjectRepo/Pages/Images/workplace-g4e36d3dde_1920.jpg);
+    background-image: url(/ProjectRepo/Index/Images/workplace-g4e36d3dde_1920.jpg);
     background-size: cover;
     color: black;
 }
@@ -45,4 +45,15 @@ h1, p {
     justify-content: center;
 }
 
-/* YLEINEN TYYLITTELY PÄÄTTYY */
+
+// ICON STYLES
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+
+  /* YLEINEN TYYLITTELY PÄÄTTYY */
