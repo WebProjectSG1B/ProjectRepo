@@ -1,4 +1,8 @@
 # ProjectRepo
-This is the main repository for the web-project.
 
-This readme file will include a description of the web pages, project and work flow of thisweb project.
+Projekti ryhmä SG1:B
+
+Tekijät: Samuli Ruotsalainen, Leevi Muraja, Matti Pitkänen, Severi Jokelainen, Msaed Al-jebur
+
+18.11.
+Tehtiin pohjarakenne etusivulle(grid, navbar, footer), tyylit katsottu,
