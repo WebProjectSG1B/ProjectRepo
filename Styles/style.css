@@ -9,6 +9,7 @@ VÄRIKOODIT
 #A1A322 
 
 */
+
 .row{
     height: 20vh;
 }
@@ -26,6 +27,7 @@ body {
 #nomargin{
     margin: 0;
 }
+
 a {
     text-decoration: none;
     color: white;
@@ -35,6 +37,7 @@ h1, p {
 }
 
 .col {
+
     border: 2px solid black;
     border-radius: 5px;
     background-color: #0f66a8;
@@ -57,7 +60,6 @@ h1, p {
     background-color: #0f66a8;
     margin: 30px;
 }
-
 .row4 {
     justify-content: center;
 }
