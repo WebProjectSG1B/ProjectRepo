@@ -20,12 +20,13 @@ VÄRIKOODIT
 body {
     font-family: "Sono";
     font-weight: 500;
-    background-image: url(/Images/black-g4ec6f0509_1920.jpg);
+    background-image: url(/Projectrepo/Images/black-g4ec6f0509_1920.jpg);
     color: white;
 
 }
 #nomargin{
-    margin: 0;
+    margin: 0 0;
+    
 }
 
 a {
@@ -44,7 +45,7 @@ h1, p {
     margin: 30px;
 }
 .offcanvas{
-    background-image: url(/Images/workplace-g4e36d3dde_1920.jpg);
+    background-image: url(/Projectrepo/Images/workplace-g4e36d3dde_1920.jpg);
     background-size: cover;
     color: black;
 }
