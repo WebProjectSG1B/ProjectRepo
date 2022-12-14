@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/* 
+YLEINEN TYYLITTELY ALKAA
+
+VÄRIKOODIT 
+#0F66A8  footer nav background ehdotus
+#F05A56  
+#3EA2F0  background color ehdotus
+#ECF026
+#A1A322 
+
+*/
+@font-face {
+  font-family: "Sono";
+  src: url(/ProjectRepo/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
+}
+body {
+  font-family: "Sono";
+  font-weight: 500;
+  background-image: url(/ProjectRepo/Pages/Images/black-g4ec6f0509_1920.jpg);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1, p {
+  text-align: center;
+}
+
+.col {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #0f66a8;
+  margin: 30px;
+}
+
+.offcanvas {
+  background-image: url(/ProjectRepo/Pages/Images/workplace-g4e36d3dde_1920.jpg);
+  background-size: cover;
+  color: black;
+}
+
+.offcanvas h4 {
+  color: black;
+}
+
+.row2, .row3 {
+  justify-content: center;
+}
+
+/* YLEINEN TYYLITTELY PÄÄTTYY */
+@-webkit-keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.modalwrap {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  padding-top: 20px;
+  left: 10%;
+  top: 15%;
+  width: 80%;
+  height: 70%;
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modalwrap .modal-content {
+  position: absolute;
+  top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  text-decoration: none;
+  font-size: small;
+  text-align: left;
+  padding: 10px;
+}
+.modalwrap .modal-content p {
+  font-size: large;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.modalwrap .close {
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  color: #f1f1f1;
+  font-size: 60px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.modalwrap .close:hover {
+  cursor: pointer;
+}
+.modalwrap #answerButton {
+  position: absolute;
+  top: 80%;
+  right: 35%;
+  font-size: large;
+  width: 30%;
+  height: 10%;
+}
+.modalwrap #answerButton:hover {
+  background-color: #F05A56;
+}
+.modalwrap #tryAgain {
+  display: none;
+  position: absolute;
+  top: 90%;
+  left: 1%;
+  font-size: large;
+  width: 20%;
+  height: 8%;
+}
+.modalwrap #tryAgain:hover {
+  background-color: #F05A56;
+}
+
+/* Sepin index */
+.links {
+  height: 250px;
+}
+.links img {
+  width: 100%;
+  height: 100%;
+}
+.links:hover {
+  cursor: pointer;
+  color: #F05A56;
+}
+
+.col-3 {
+  padding: 0%;
+}
+.col-3 p {
+  position: relative;
+  bottom: 98%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  flex-direction: row;
+}
+.footer img {
+  width: 7%;
+  margin: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .col-3 {
+    width: 80%;
+    height: auto;
+    background-color: #3EA2F0;
+  }
+  .col-3 p {
+    position: relative;
+    top: 0%;
+  }
+  .col-3 img {
+    display: none;
+  }
+  .footer img {
+    display: none;
+  }
+}/*# sourceMappingURL=sepiIndex.css.map */
