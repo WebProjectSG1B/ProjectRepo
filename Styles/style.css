@@ -19,7 +19,6 @@ VÄRIKOODIT
   src: url(/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
 }
 body {
-<<<<<<< HEAD
   font-family: "Sono";
   font-weight: 500;
   background-image: url(/Images/black-g4ec6f0509_1920.jpg);
@@ -46,17 +45,6 @@ body {
   position: absolute;
   top: 1vh;
   margin-right: 5px;
-=======
-    font-family: "Sono";
-    font-weight: 500;
-    background-image: url(/Projectrepo/Images/black-g4ec6f0509_1920.jpg);
-    color: white;
-
-}
-#nomargin{
-    margin: 0 0;
-    
->>>>>>> 959e15a11d6f26d1bdd9787012fe08880d2ca3fd
 }
 
 a {
@@ -74,18 +62,11 @@ h1, p {
   background-color: #0f66a8;
   margin: 30px;
 }
-<<<<<<< HEAD
 
 .offcanvas {
   background-image: url(/Images/workplace-g4e36d3dde_1920.jpg);
   background-size: cover;
   color: black;
-=======
-.offcanvas{
-    background-image: url(/Projectrepo/Images/workplace-g4e36d3dde_1920.jpg);
-    background-size: cover;
-    color: black;
->>>>>>> 959e15a11d6f26d1bdd9787012fe08880d2ca3fd
 }
 .offcanvas h4 {
   color: black;
