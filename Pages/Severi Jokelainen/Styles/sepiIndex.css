@@ -87,7 +87,7 @@ h1, p {
   }
 }
 .modalwrap {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 2;
   padding-top: 20px;
@@ -156,6 +156,13 @@ h1, p {
 }
 .modalwrap #tryAgain:hover {
   background-color: #F05A56;
+}
+
+#results {
+  border: 1px solid white;
+  position: absolute;
+  left: 32vw;
+  top: 40vh;
 }
 
 /* Sepin index */
