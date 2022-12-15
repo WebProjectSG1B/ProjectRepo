@@ -6,8 +6,7 @@
 .modalwrap{
     display: block;
     position: fixed; 
-    z-index: 2; 
-    padding-top: 20px; 
+    z-index: 2;  
     left: 10%;
     top: 15%;
     width: 80%; 
@@ -76,8 +75,9 @@
 #results {
     border: $whiteBorder;
     position: absolute;
-    left: 32vw;
-    top: 40vh;
+    left: 50vh;
+    top: 50vh;
+    font-size: large;
     // @media screen and (max-width: 1440px) {
     //         top: 4vh;
     //         left: 30vw;
