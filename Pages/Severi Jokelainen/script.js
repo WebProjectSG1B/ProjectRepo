@@ -27,27 +27,34 @@ function checkAnswers1() {
     let answer2 = document.getElementById("correct2");
     let answer3 = document.getElementById("correct3");
     let answer4 = document.getElementById("correct4");
-
+    let answerArray = [answer1,answer2,answer3,answer4]
         if (answer1.checked == true || answer2.checked == true || answer3.checked == true || answer4.checked == true) {
             console.log("Yksi vastaus oikein neljästä");
-        } else if(answer2.checked) {
-            console.log("Väärä vastaus, yritä uudestaan!");
+        } if (answerArray.every(element => element.checked == true) == true) {
+            console.log("Kaikki oikein, mahtavaa!");
         }
-    console.log(answer1.checked);
+    console.log(answerArray.every(element => element.checked == true));
 }
 // This function clears all the answer option when clicking the "Yritä uudelleen" -button.
 function clearAnswers (){
-    let answer = document.getElementsByName("answer");
+    let answer1 = document.getElementsByName("answer");
     let answer2 = document.getElementsByName("answer2");
     let answer3 = document.getElementsByName("answer3");
     let answer4 = document.getElementsByName("answer4");
-    answer.forEach((element)=>element.checked = false);
+
+    answer1.forEach((element)=>element.checked = false);
     answer2.forEach((element)=>element.checked = false);
     answer3.forEach((element)=>element.checked = false);
     answer4.forEach((element)=>element.checked = false);
 }
 
 
-
-
-
+// function checkAnswersArray(){
+//     let answer1 = document.getElementById("correct1");
+//     let answer2 = document.getElementById("correct2");
+//     let answer3 = document.getElementById("correct3");
+//     let answer4 = document.getElementById("correct4");
+//     let answerArray = [answer1,answer2,answer3,answer4]
+//     console.log(answerArray.forEach());
+//     return answerArray.every(element => element == true);
+// }
