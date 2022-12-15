@@ -9,6 +9,9 @@ VÄRIKOODIT
 #A1A322 
 
 */
+
+
+
 @font-face {
     font-family: "Sono";
     src: url(/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
@@ -30,7 +33,7 @@ h1, p {
 
 .col {
     border-radius: 5px;
-    background-color: #0f66a8;
+    background-color: $mainColor;
     margin: 30px;
 }
 .offcanvas{
@@ -59,7 +62,7 @@ h1, p {
     display: flex;
     justify-content: space-between;
         &:hover {
-            color:#0f66a8;
+            color: $mainColor;
         }
 }
 .material-symbols-outlined {

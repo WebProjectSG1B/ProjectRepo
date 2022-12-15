@@ -1,6 +1,12 @@
+
 @import "./mainStyle";
 @import './modaaal';
+
+// Color variables
+$mainColor: #0f66a8;
+$accentColor: #3EA2F0;
 /* Sepin index */
+
 
 .links {
     height: 250px;
@@ -12,7 +18,7 @@
     }
     &:hover {
         cursor: pointer;
-        color: #3EA2F0;
+        color: $accentColor;
     }
 }
 .col-4 {
@@ -31,7 +37,7 @@
 #footer {
     border: 2px solid black;
     border-radius: 5px;
-    background-color: rgba(15, 102, 168, 0.925);
+    background-color: $mainColor;
     margin-bottom: 2px;
     margin-left: 0;
     justify-content: center;
@@ -49,15 +55,15 @@
   .carIcon{
     height: 70px;
     width: 70px;
-    background-color:#3EA2F0;
+    background-color:$accentColor;
     border-radius: 15px;
   }
   .carousel-indicators {
     height: 5px;
         // NÄÄ ON NE NAPIT
         [data-bs-target]{ 
-            background-color: #3EA2F0;
-            border: 1px solid #3EA2F0;
+            background-color: $accentColor;
+            border: 1px solid $accentColor;
             border-radius: 5px;
             height: 10px;
             width: 40px;
@@ -76,7 +82,7 @@
     .col-3 {
         width: 80%;
         height: auto;
-        background-color: #3EA2F0;
+        background-color: $accentColor;
         p {
             position: relative;
             top: 0%;
