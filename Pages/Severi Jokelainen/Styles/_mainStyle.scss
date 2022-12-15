@@ -58,6 +58,9 @@ h1, p {
 .NaviLinks h4{
     display: flex;
     justify-content: space-between;
+        &:hover {
+            color:#0f66a8;
+        }
 }
 .material-symbols-outlined {
     font-variation-settings:

@@ -27,7 +27,3 @@ tryAgain.addEventListener("click", function(){
 
 
 
-
-let linkOffCanvas = document.querySelectorAll("h4");
-linkOffCanvas.forEach((element)=>element.addEventListener("mouseenter", ()=>element.style.color = "#0f66a8"));
-linkOffCanvas.forEach((element)=>element.addEventListener("mouseleave", ()=>element.style.color = "black"));

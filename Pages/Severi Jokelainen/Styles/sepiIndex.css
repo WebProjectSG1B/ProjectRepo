@@ -60,6 +60,9 @@ h1, p {
   display: flex;
   justify-content: space-between;
 }
+.NaviLinks h4:hover {
+  color: #0f66a8;
+}
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;

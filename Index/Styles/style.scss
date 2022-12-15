@@ -45,6 +45,9 @@ body {
 a {
     text-decoration: none;
     color: white;
+        &:hover {
+            color: #F05A56;
+        }
 }
 h1, p {
     text-align: center;
@@ -104,6 +107,9 @@ h1{
 .NaviLinks h4{
     display: flex;
     justify-content: space-between;
+        &:hover {
+            color:#0f66a8;
+        }
 }
 .material-symbols-outlined {
     font-variation-settings:
