@@ -4,35 +4,29 @@
     https://www.section.io/engineering-education/how-to-build-a-quiz-app-with-vanilla-javascript-and-tailwind-css/
     Sekä erilaisia ratkaisumalleja/ohjeistuksia stackoverflowsta/www3schoolssista
     */
-// Muuttujat jotka hakevat tarvitut elementit
 
-let startButton = document.getElementById('start-button');
-let questionContainer = document.querySelector('.question-container');
-let nextButton = document.getElementById('next-button');
-let quizContainer = document.getElementById('quiz-container');
-let answerRows = document.querySelectorAll('div.answer-row');
-let answerRow1 =  document.getElementById('answer-row1')
-let answerRow2 =  document.getElementById('answer-row2')
-let answerContainer = document.getElementById('answer-container');
-let answerDiv = document.getElementsByClassName('answer-div');
-let explanationDiv = document.getElementById('explanation-div');
-let answerCounter= document.getElementById('counter');
-let rightAnswerDiv = document.getElementById('number-of-right-answers')
-let introDiv = document.getElementById('intro-div')
-// TODO
-// NO VITTU VAIKKA KAIKKI SAATANA
-/* 
-    5.12. [Luo asettelut kuntoon. Kosmetikka hoitoa, kaikki funktionaalinen toimii tarkoituksen mukaisesti.
-    Luo sisällöt kysymyksille]
-    7.12. [Luotu +7 kysymystä, yhteensä 12. Halutessaan voi tehdä lisää.
-        Korjattu laskuri, peli toimii nyt täydellisesti. Ainoa backendin todo lisätä kysymyksiä
-        Frontendi kaipaa vielä hiomista, mutta kaiken tälläpuolella *pitäisi* toimia. 
-    ]
-*/
+ // Muuttujat jotka hakevat tarvitut elementit
+    let startButton = document.getElementById('start-button');
+    let nextButton = document.getElementById('next-button');
+    let homeButton = document.getElementById('home-button');
+    let bufferRow1 = document.getElementById('buffer-row1')
+    let bufferRow2 = document.getElementById('buffer-row2')
+    let homeButtonText = document.getElementById('homebutton-text');
+    let questionContainer = document.querySelector('.question-container');
+    let quizContainer = document.getElementById('quiz-container');
+    let answerRows = document.querySelectorAll('div.answer-row');
+    let answerRow1 =  document.getElementById('answer-row1')
+    let answerRow2 =  document.getElementById('answer-row2')
+    let answerContainer = document.getElementById('answer-container');
+    let answerDiv = document.getElementsByClassName('answer-div');
+    let explanationDiv = document.getElementById('explanation-div');
+    let answerCounter= document.getElementById('counter');
+    let rightAnswerDiv = document.getElementById('number-of-right-answers')
+    let introDiv = document.getElementById('intro-div')
+    let btnResponsiveSize = document.querySelector('.btnResponsiveSize')
+    let screenWidth = screen.width;
 
-
-/* Array joka sisältää kysymykset, vastaukset, sekä selitykset
-*/
+/* Array joka sisältää kysymykset, vastaukset, sekä selitykset */
 const questions = [
     {
         kysymys: 'Mikä on hätäpalvelun numero kaikissa EU-maissa?',
@@ -137,48 +131,49 @@ const questions = [
         vinkit: 'Shetlannin saaret sijaitsevat Iso-Britannian saarten pohjoispuolella, ja ovat kuuluneet Iso-Britannialle vuodesta 1472.'
     },
     {
-    kysymys: 'Minkä meren rannikolla Monaco sijaitsee?',
-    vastaukset:[
-        {text: 'Välimeren', correct:true},
-        {text: 'Jäämeren', correct:false},
-        {text: 'Intian valtameren', correct:false},
-        {text: 'Punaisen meren', correct:false}
-    ],
-    vinkit: 'Monaco on itsenäinen kääpiövaltio, joka sijaitsee välimeren rannalla, lähellä Ranskan ja Italian pohjoista rajaa.'
+        kysymys: 'Minkä meren rannikolla Monaco sijaitsee?',
+        vastaukset:[
+            {text: 'Välimeren', correct:true},
+            {text: 'Jäämeren', correct:false},
+            {text: 'Intian valtameren', correct:false},
+            {text: 'Punaisen meren', correct:false}
+         ],
+        vinkit: 'Monaco on itsenäinen kääpiövaltio, joka sijaitsee välimeren rannalla, lähellä Ranskan ja Italian pohjoista rajaa.'
     },
     {
-    kysymys: 'Minkä EU-maan pääkaupunki on Pariisi?',
-    vastaukset:[
-        {text: 'Suomen', correct:false},
-        {text: 'Ruotsin', correct:false},
-        {text: 'Ranskan', correct:true},
-        {text: 'Espanjan', correct:false}
-    ],
-    vinkit: 'Pariisi on Ranskan pääkaupunki vuodesta 508 lähtien.'
+        kysymys: 'Minkä EU-maan pääkaupunki on Pariisi?',
+        vastaukset:[
+            {text: 'Suomen', correct:false},
+            {text: 'Ruotsin', correct:false},
+            {text: 'Ranskan', correct:true},
+            {text: 'Espanjan', correct:false}
+        ],
+        vinkit: 'Pariisi on Ranskan pääkaupunki vuodesta 508 lähtien.'
     },
     {
-    kysymys: 'Mikä seuraavista ei ole Belgian naapurimaa?',
-    vastaukset:[
-        {text: 'Tanska', correct:true},
-        {text: 'Alankomaat', correct:false},
-        {text: 'Luxemburg', correct:false},
-        {text: 'Ranska', correct:false}
-    ],
-    vinkit: 'Tanskalla ja Belgialla ei ole yhteistä maa- tai merirajaa, jonka vuoksi Tanska ei ole Belgian naapurimaa.'
+        kysymys: 'Mikä seuraavista ei ole Belgian naapurimaa?',
+        vastaukset:[
+            {text: 'Tanska', correct:true},
+            {text: 'Alankomaat', correct:false},
+            {text: 'Luxemburg', correct:false},
+            {text: 'Ranska', correct:false}
+        ],
+        vinkit: 'Tanskalla ja Belgialla ei ole yhteistä maa- tai merirajaa, jonka vuoksi Tanska ei ole Belgian naapurimaa.'
     }
 ];
 
 /* Laskurit, jotka sisältävät kysymyksen numeron, ja estävät aikaisemmin esitettyjen kysymysten
 Esittämisen*/ 
-let shuffledQuestion;
-let currentQuestionNumber;
-let questionsAmount = 5;
-let questionsAnswered = 0;
-let rightAnswers = 0;
-let clicked = false;
+    let shuffledQuestion;
+    let currentQuestionNumber;
+    let questionsAmount = 5;
+    let questionsAnswered = 0;
+    let rightAnswers = 0;
+    let clicked = false;
 //Event listenerit aloitus ja seuraava napille
- startButton.addEventListener('click', startGame);
-nextButton.addEventListener('click', () => {
+    startButton.addEventListener('click', startGame);
+    homeButton.addEventListener('click', () => homeButtonText.click())
+    nextButton.addEventListener('click', () => {
     currentQuestionNumber++
     nextQuestion()
 });
@@ -188,7 +183,11 @@ nextButton.addEventListener('click', () => {
 /* Aloittaa pelin. Muuttaa CSS luokituksia näkyvyydelle, ja asettaa kysymyksen numeroksi
   0. Hakee satunnaisen kysymyksen questions arraysta*/
 function startGame(){
+    btnResponsiveSize.classList.remove('btnResponsiveSize')
+    bufferRow1.classList.remove('buffer-row')
+    bufferRow2.classList.remove('buffer-row')
     startButton.classList.add('hidden');
+    homeButton.classList.add('hidden');
     answerCounter.classList.remove('hidden');
     quizContainer.classList.remove('transparent');
     introDiv.classList.add('hidden')
@@ -217,15 +216,13 @@ function nextQuestion(){
         questionsAnswered = 1
     };
     questionsAnswered++
-
-    
 };
 
 /* Poistaa olemessaolevat vastausvaihtoehto divit */
 function resetDivs(){
-     nextButton.classList.add('hidden');
-     explanationDiv.classList.add('hidden');
-     questionContainer.classList.remove('hidden')
+    nextButton.classList.add('hidden');
+    explanationDiv.classList.add('hidden');
+    questionContainer.classList.remove('hidden')
     answerRow1.replaceChildren();
     answerRow2.replaceChildren();
 }
@@ -251,23 +248,21 @@ function showQuestion(kysymys) {
             const div = document.createElement('div');
             div.classList.add('col', 'answer-div', 'text-center');
             div.innerText = vastaukset.text
-           answerRow2.appendChild(div)
-           if(vastaukset.correct === true) {
+            answerRow2.appendChild(div)
+            if(vastaukset.correct === true) {
                div.dataset.correct = vastaukset.correct
             } 
-     }
+        }
     }
 )
     Array.from(answerDiv).forEach(answerDiv => answerDiv.addEventListener('click', pickAnswer))
    
 };
 
-
 /* Vastausta painettaessa kutsuu setClass funktiota, jolla asettaa oikeat taustavärit vastaus diveille. Muokkaa
     näkyvyys luokkia sen mukaan, onko kysymyksiä enään jäljellä. Esittää selitys divin käyttäjälle. */
 /** @param {event} event */
 function pickAnswer(event) {
-
     Array.from(answerRow1.children).forEach((div) => setClass(div, div.dataset.correct));
     Array.from(answerRow2.children).forEach((div) => setClass(div, div.dataset.correct));
     explanationDiv.classList.remove('hidden');
@@ -286,13 +281,12 @@ function pickAnswer(event) {
     } else {
         startButton.innerText = "Pelaa uudelleen";
         startButton.classList.remove('hidden');
-      
+        homeButton.classList.remove('hidden');
         rightAnswerDiv.classList.remove('hidden');
         rightAnswerDiv.innerText = ('Sait ' + rightAnswers + ' kysymystä oikein!')
     };
 };
    
-
 /* Parametri tarkistaa, onko elementillä dataset arvo correct. Jos true, antaa 
     elementille luokan correct, muuten luokan wrong. Luokille on määritelty värit CSS
     koodissa */
