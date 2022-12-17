@@ -4,10 +4,9 @@
     to {transform:scale(1)}
   }
 .modalwrap{
-    display: none;
+    display: block;
     position: fixed; 
-    z-index: 2; 
-    padding-top: 20px; 
+    z-index: 2;  
     left: 10%;
     top: 15%;
     width: 80%; 
@@ -29,7 +28,7 @@
         padding: 10px;
             p {
                 font-size: large;
-                border: 1px solid white;
+                border: $whiteBorder;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -56,10 +55,7 @@
         width: 30%;
         height: 10%;
             &:hover {
-                background-color: #F05A56;
-            }
-            &:active {
-
+                background-color: $redAccent;
             }
     }
     #tryAgain {
@@ -71,7 +67,19 @@
         width: 20%;
         height: 8%;
             &:hover {
-                background-color: #F05A56;
-            }
+                background-color: $redAccent;
+        }
     }
-  }
+}
+
+#results {
+    border: $whiteBorder;
+    position: absolute;
+    left: 50vh;
+    top: 50vh;
+    font-size: large;
+    // @media screen and (max-width: 1440px) {
+    //         top: 4vh;
+    //         left: 30vw;
+    //     }
+    }
