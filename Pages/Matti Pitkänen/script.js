@@ -11,10 +11,10 @@
     },
 
     {
-        question: "Valitse oikea tavu täyttämään sana: TAV-...-TUS",
+        question: "Valitse oikea tavu täyttämään sana: TA-...-TUS",
         optionA: "VA",
         optionB: "UTT",
-        optionC: "UT",
+        optionC: "VU",
         optionD: "TUT",
         correctOption: "optionC"
     },
@@ -57,9 +57,9 @@
         
     {
         question: "Valitse oikein kirjoitettu lause.",
-        optionA: "Aamulla aurinko nousee ja alkaa läMmittää.",
-        optionB: "Aamulla Jarkko lähtee iloisena kouluun.",
-        optionC: "väinöllä usein Kiukuttaa jos isä kieltää pelaamisen.",
+        optionA: "Aurinko Nousee Aamulla.",
+        optionB: "Aamulla Jarkko lähtee kouluun.",
+        optionC: "väinö on Iloinen",
         optionD: "Koulussa käynti EI ole turhaa.",
         correctOption: "optionB"
     },
@@ -216,7 +216,6 @@ function checkForAnswer() {
 /*          let modalpopup = document.getElementById('option-modal');
             modalpopup.style.display = "flex"; // Tuodaan modal popup näkyviin kun väärä vastaus.
             document.getElementById("modalText").innerText = "Väärä vastaus." */
-
             document.getElementById("display-question").innerHTML = "Väärä vastaus"; // vaihdetaan modalin tekstiksi Väärä vastaus
             
         }
