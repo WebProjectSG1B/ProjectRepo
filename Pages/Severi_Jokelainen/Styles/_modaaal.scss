@@ -4,7 +4,7 @@
     to {transform:scale(1)}
   }
 .modalwrap{
-    display: block;
+    display: none;
     position: fixed; 
     z-index: 2;  
     left: 10%;
@@ -34,8 +34,11 @@
                 justify-content: space-evenly;
                 padding: 20px;
             }
+            @media screen and (max-width: 1060px) {
+                flex-direction: column;
+            }
     }
-    .close {
+    .close, .close2, .close3 {
         position: absolute;
         top: 0px;
         right: 30px;
@@ -47,7 +50,7 @@
             cursor: pointer;
         }
     }
-    #answerButton {
+    #answerButton, #answerButton2, #answerButton3 {
         position: absolute;
         top: 80%;
         right: 35%;
@@ -57,29 +60,51 @@
             &:hover {
                 background-color: $redAccent;
             }
+            @media screen and (max-width: 1060px) {
+                top: 20px;
+            }
+            @media screen and (max-width: 425px) {
+                top: 45px;
+                font-size: 0.8em;
+            }
     }
-    #tryAgain {
+    #tryAgain, #tryAgain2, #tryAgain3 {
         display: none;
         position: absolute;
-        top: 90%;
-        left: 1%;
+        top: 80%;
+        right: 40%;
         font-size: large;
         width: 20%;
         height: 8%;
             &:hover {
                 background-color: $redAccent;
-        }
+            }
+            @media screen and (max-width: 1060px) {
+            top: 20px;
+            left: 70%;
+            font-size: 0.8em;
+            }
+            @media screen and (max-width: 425px) {
+                font-size: 0.8em;
+                top: 70px;
+                left: 6%;
+                width: 60%;
+                height: 5%;
+            }
     }
 }
 
-#results {
+#results, #results2, #results3 {
+    background-color: #3ea3f0cb;
     border: $whiteBorder;
     position: absolute;
-    left: 50vh;
-    top: 50vh;
+    top: 2vh;
+    left: 2vh;
     font-size: large;
-    // @media screen and (max-width: 1440px) {
-    //         top: 4vh;
-    //         left: 30vw;
-    //     }
+        @media screen and (max-width: 1060px) {
+            font-size: 0.85em;
+        }
+        @media screen and (max-width: 425px) {
+            width: 70%;
+        }
     }

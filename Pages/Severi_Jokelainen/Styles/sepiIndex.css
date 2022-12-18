@@ -30,6 +30,10 @@ h1, p {
   text-align: center;
 }
 
+.headertext, table {
+  background-color: rgba(0, 0, 0, 0.479);
+}
+
 .col {
   border-radius: 5px;
   background-color: #0f66a8;
@@ -87,7 +91,7 @@ h1, p {
   }
 }
 .modalwrap {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 2;
   left: 10%;
@@ -121,7 +125,12 @@ h1, p {
   justify-content: space-evenly;
   padding: 20px;
 }
-.modalwrap .close {
+@media screen and (max-width: 1060px) {
+  .modalwrap .modal-content {
+    flex-direction: column;
+  }
+}
+.modalwrap .close, .modalwrap .close2, .modalwrap .close3 {
   position: absolute;
   top: 0px;
   right: 30px;
@@ -130,10 +139,10 @@ h1, p {
   font-weight: bold;
   transition: 0.3s;
 }
-.modalwrap .close:hover {
+.modalwrap .close:hover, .modalwrap .close2:hover, .modalwrap .close3:hover {
   cursor: pointer;
 }
-.modalwrap #answerButton {
+.modalwrap #answerButton, .modalwrap #answerButton2, .modalwrap #answerButton3 {
   position: absolute;
   top: 80%;
   right: 35%;
@@ -141,28 +150,66 @@ h1, p {
   width: 30%;
   height: 10%;
 }
-.modalwrap #answerButton:hover {
+.modalwrap #answerButton:hover, .modalwrap #answerButton2:hover, .modalwrap #answerButton3:hover {
   background-color: #F05A56;
 }
-.modalwrap #tryAgain {
+@media screen and (max-width: 1060px) {
+  .modalwrap #answerButton, .modalwrap #answerButton2, .modalwrap #answerButton3 {
+    top: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .modalwrap #answerButton, .modalwrap #answerButton2, .modalwrap #answerButton3 {
+    top: 45px;
+    font-size: 0.8em;
+  }
+}
+.modalwrap #tryAgain, .modalwrap #tryAgain2, .modalwrap #tryAgain3 {
   display: none;
   position: absolute;
-  top: 90%;
-  left: 1%;
+  top: 80%;
+  right: 40%;
   font-size: large;
   width: 20%;
   height: 8%;
 }
-.modalwrap #tryAgain:hover {
+.modalwrap #tryAgain:hover, .modalwrap #tryAgain2:hover, .modalwrap #tryAgain3:hover {
   background-color: #F05A56;
 }
+@media screen and (max-width: 1060px) {
+  .modalwrap #tryAgain, .modalwrap #tryAgain2, .modalwrap #tryAgain3 {
+    top: 20px;
+    left: 70%;
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 425px) {
+  .modalwrap #tryAgain, .modalwrap #tryAgain2, .modalwrap #tryAgain3 {
+    font-size: 0.8em;
+    top: 70px;
+    left: 6%;
+    width: 60%;
+    height: 5%;
+  }
+}
 
-#results {
+#results, #results2, #results3 {
+  background-color: rgba(62, 163, 240, 0.7960784314);
   border: 1px solid white;
   position: absolute;
-  left: 50vh;
-  top: 50vh;
+  top: 2vh;
+  left: 2vh;
   font-size: large;
+}
+@media screen and (max-width: 1060px) {
+  #results, #results2, #results3 {
+    font-size: 0.85em;
+  }
+}
+@media screen and (max-width: 425px) {
+  #results, #results2, #results3 {
+    width: 70%;
+  }
 }
 
 /* Sepin index */
@@ -179,6 +226,11 @@ h1, p {
   cursor: pointer;
   color: #3EA2F0;
 }
+@media screen and (max-width: 530px) {
+  .links {
+    font-size: 0.7em;
+  }
+}
 
 .col-4 {
   padding: 0px;
@@ -193,7 +245,7 @@ h1, p {
   justify-content: center;
 }
 
-#footer {
+#footer, #nomargin {
   border: 2px solid black;
   border-radius: 5px;
   background-color: #0f66a8;
@@ -201,6 +253,8 @@ h1, p {
   margin-left: 0;
   justify-content: center;
   z-index: 0;
+  background-image: url(/Index/Images/puuHeader.jpg);
+  background-repeat: none;
 }
 
 #nomargin {
@@ -230,9 +284,6 @@ h1, p {
 }
 
 @media screen and (max-width: 767px) {
-  .links img {
-    display: none;
-  }
   .col-3 {
     width: 80%;
     height: auto;
@@ -241,8 +292,5 @@ h1, p {
   .col-3 p {
     position: relative;
     top: 0%;
-  }
-  .col-3 img {
-    display: none;
   }
 }/*# sourceMappingURL=sepiIndex.css.map */

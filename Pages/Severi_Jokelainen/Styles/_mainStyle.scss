@@ -29,8 +29,11 @@ a {
 }
 h1, p {
     text-align: center;
+    
 }
-
+.headertext, table {
+    background-color: rgba(0, 0, 0, 0.479) ;
+}
 .col {
     border-radius: 5px;
     background-color: $mainColor;

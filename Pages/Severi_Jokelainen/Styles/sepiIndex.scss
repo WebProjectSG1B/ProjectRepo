@@ -18,6 +18,9 @@
         cursor: pointer;
         color: $accentColor;
     }
+    @media screen and (max-width: 530px) {
+        font-size: 0.7em;
+    }
 }
 .col-4 {
     padding: 0px;
@@ -32,7 +35,7 @@
     justify-content: center;
 }
 
-#footer {
+#footer, #nomargin {
     border: 2px solid black;
     border-radius: 5px;
     background-color: $mainColor;
@@ -40,8 +43,9 @@
     margin-left: 0;
     justify-content: center;
     z-index: 0;
+    background-image: url(/Index/Images/puuHeader.jpg);
+    background-repeat: none;
   }
-
 #nomargin {
   margin: 0;
   padding-top: 0.1vh;
@@ -70,13 +74,7 @@
 }
 
 
-
 @media screen and (max-width: 767px){
-    .links {
-        img {
-            display: none;
-        }
-    }
     .col-3 {
         width: 80%;
         height: auto;
@@ -84,9 +82,6 @@
         p {
             position: relative;
             top: 0%;
-        }
-        img {
-            display: none;
         }
     }
 }
