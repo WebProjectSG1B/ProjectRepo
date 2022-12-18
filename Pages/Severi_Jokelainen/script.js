@@ -1,3 +1,12 @@
+// Severi Jokelainen/Web-projekti 12/2022
+/*
+Alla oleva koodi ohjaa sivujen sekä tehtäväikkunoiden toiminnallisuutta.
+Apuna käytetty mm. seuraavia sivuja:
+    w3schools.com
+    developer.mozilla.org/en-US/docs/Web
+    stackoverflow.com
+*/
+// Muuttujien ja vakioiden lista.
 let percent = document.getElementById("percent");
 let decimal = document.getElementById("decimal");
 let calc = document.getElementById("calc");
@@ -14,6 +23,7 @@ const RESULTS = document.getElementById("results");
 const RESULTS2 = document.getElementById("results2");
 const RESULTS3 = document.getElementById("results3");
 
+//Näillä lausekkeilla näytetään tehtäväikkunat kun kuvia painetaan, ja suljetaan rastista.
 document.getElementById("percent").addEventListener("click", ()=>modal1.style.display = "block");
 decimal.addEventListener("click", ()=>modal2.style.display = "block");
 calc.addEventListener("click", ()=>modal3.style.display = "block");
@@ -21,9 +31,9 @@ document.querySelector(".close").addEventListener("click", ()=>modal1.style.disp
 document.querySelector(".close2").addEventListener("click", ()=>modal2.style.display = "none");
 document.querySelector(".close3").addEventListener("click", ()=>modal3.style.display = "none");
 
-// Modal button functions
-
-answerButton.addEventListener("click", ()=>{
+// Tehtäväikkunoiden nappien funktiot
+// Näytetään ja piilotetaan tarkastus- sekä "Yritä uudelleen" -napit painettaessa.
+answerButton.addEventListener("click", ()=>{        
     checkAnswers1();
     answerButton.style.display = "none";
     tryAgain.style.display = "block";
@@ -55,8 +65,8 @@ tryAgain3.addEventListener("click", ()=>{
     answerButton3.style.display = "block";
     tryAgain3.style.display = "none";
 });
-// Modal quiz functions
-
+// Tehtäväpakettien tarkastus
+// Alla olevat funktiot tarkistavat oikeat vastaukset ja näyttävät tuloksen käyttäjälle.
 function checkAnswers1() {
     let answer1 = document.getElementById("correct1").checked;
     let answer2 = document.getElementById("correct2").checked;
@@ -167,7 +177,7 @@ function checkAnswers3() {
             RESULTS3.style.backgroundColor = "rgba(0, 172, 0, 0.774)";
         }
 }
-// This function clears all the answer option when clicking the "Yritä uudelleen" -button.
+// Alla olevat funktiot tyhjentävät valitut vastaukset, sekä tuloslaatikon kun "Yritä uudelleen" -nappia painetaan.
 function clearAnswers (){
     let answer1 = document.getElementsByName("answer");
     let answer2 = document.getElementsByName("answer2");

@@ -1,3 +1,6 @@
+// Severi Jokelainen/Web-projekti 12/2022
+// Alla oleva tyylittely koskee jokaista tehtäväikkunaa, joka avautuu kuvalinkeistä painamalla.
+// Osa koodista lainattu sivulta https://www.w3schools.com/w3css/w3css_modal.asp
 
 @keyframes zoom {
     from {transform:scale(0)}
@@ -16,7 +19,7 @@
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.9); 
-    .modal-content {
+    .modal-content {                // Kysymyslaatikkojen muotoilu
         position: absolute;
         top: 80px;
         display: flex;
@@ -26,7 +29,7 @@
         font-size: small;
         text-align: left;
         padding: 10px;
-            p {
+            p {        //Kysymysten teksti
                 font-size: large;
                 border: $whiteBorder;
                 display: flex;
@@ -38,7 +41,7 @@
                 flex-direction: column;
             }
     }
-    .close, .close2, .close3 {
+    .close, .close2, .close3 {          //Rasti-ikoni, joka sulkee ikkunan
         position: absolute;
         top: 0px;
         right: 30px;
@@ -50,7 +53,7 @@
             cursor: pointer;
         }
     }
-    #answerButton, #answerButton2, #answerButton3 {
+    #answerButton, #answerButton2, #answerButton3 {     //Painikkeet, joilla tehtävät tarkastetaan.
         position: absolute;
         top: 80%;
         right: 35%;
@@ -68,7 +71,7 @@
                 font-size: 0.8em;
             }
     }
-    #tryAgain, #tryAgain2, #tryAgain3 {
+    #tryAgain, #tryAgain2, #tryAgain3 {             //Painikkeet, joilla tehtäväpakettia voi yrittää uudelleen.
         display: none;
         position: absolute;
         top: 80%;
@@ -94,7 +97,7 @@
     }
 }
 
-#results, #results2, #results3 {
+#results, #results2, #results3 {            //Tuloslaatikon muotoilu: tähän tulostetaan kaikki käyttäjälle näytettävä teksti, esim. pisteet.
     background-color: #3ea3f0cb;
     border: $whiteBorder;
     position: absolute;

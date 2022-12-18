@@ -1,3 +1,5 @@
+ // Severi Jokelainen/Web-projekti 12/2022
+ 
  /* 
 YLEINEN TYYLITTELY ALKAA
 
@@ -7,12 +9,10 @@ VÄRIKOODIT
 #3EA2F0  background color ehdotus
 #ECF026
 #A1A322 
-
 */
-
 @import "./variables";
 
-@font-face {
+@font-face {            //lähde: https://fonts.google.com
     font-family: "Sono";
     src: url(/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
 }
@@ -60,7 +60,7 @@ h1, p {
 }
 
 
-// ICON STYLES
+// Navigaatiopalkin ikoneiden tyylit (lähde:https://fonts.google.com/icons)
 .NaviLinks h4{
     display: flex;
     justify-content: space-between;
