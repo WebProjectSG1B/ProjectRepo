@@ -197,15 +197,12 @@ h1, p {
         margin: 0;
         padding: 5px;
      }
-     
-    
 }
 @media screen and (max-width: 700px){
     #menubutton{
       top: 0.2vh;
       left: 2vw;
     }
-
 }
 @media screen and (max-width: 500px) {
     #start-button{
@@ -216,20 +213,17 @@ h1, p {
         top: 0.1vh;
         left: 2vw;
       }
-      
 }
 @media screen and (max-width: 350px){
     #footer{
         display: none;
     }
 }
-
 @media screen and (max-width: 300px){
     #menubutton{
         font-size: 2em;
     }
 }
-
 @media screen and (max-height: 730px) and (min-width:1200px){
     #footer{
         display: none;
@@ -240,8 +234,6 @@ h1, p {
         display: none;
     }
 }
-
-
 @media screen and (max-height: 650px){
     #footer{
         display: none;
@@ -250,7 +242,6 @@ h1, p {
     .btnResponsiveSize{
         margin-top: 15%;
     }
-    
 }
 @media screen and (max-height: 560px){
     #footer{
@@ -259,7 +250,14 @@ h1, p {
     #quiz-container{
         margin-top: 12vh;
     }
-    /* #start-button{
-        margin-top: 2%;
-    } */
+}
+@media screen and (max-height:677px) and (max-width:375px){
+    #footer{
+        display: none;
+    }
+}
+@media screen and (max-height:800px) and (max-width:400px){
+    #footer{
+        display: none;
+    }
 }
