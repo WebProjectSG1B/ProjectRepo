@@ -42,10 +42,12 @@ VARIKOODIT
   #menubutton {
     font-size: 3em;
     position: absolute;
-    top: 1vh;
+    top: 0vh;
     margin-right: 5px;
   }
-  
+  #menubutton:hover{
+    color: #0f66a8b5;
+  }
 
   #navigaatio {
     padding-left: 0.6vw;
@@ -260,4 +262,12 @@ h1, p {
             display: none;
         }
     }
+}
+
+#koti-icon{     
+    font-size: 3em;
+    top: 1vh;
+    position: absolute;
+    right: 1vh;
+    margin-right: 1vw;
 }
