@@ -138,11 +138,10 @@
 
 ]
 
-let shuffledQuestions = [] // tyhjä array mihin tuodaan kysymys pankista arvotut kysymykset
+let shuffledQuestions = [] // tyhjä array näyttämään arvotut kysymykset.
 
 function handleQuestions() { 
-
-    // Funktio mikä sekoittaa ja pushaa 10 kysymystä shuffledQuestions arrayhyn
+  // Funktio mikä sekoittaa ja pushaa 10 kysymystä shuffledQuestions arrayhyn
     //kysyy 10 kysymystä kerrallaan.
     while (shuffledQuestions.length <= 9) {
         const random = questions[Math.floor(Math.random() * questions.length)]
@@ -153,11 +152,11 @@ function handleQuestions() {
 }
 
 
-let questionNumber = 1 // Nykyisen kysymyksen numero
-let pelaajanPisteet = 0  // Pelaajan pisteet
-let VääriäYrityksiä = 0 // Väärien vastauksin määrä
-let indexNumber = 0 // Käytetään näyttäämän uusi kysymys
 
+let questionNumber = 1 // nykyisen kysymyksen numero
+let playerScore = 0  // pelaajan pisteiden variable
+let wrongAttempt = 0 // väärien vastausten variable
+let indexNumber = 0 // käytään näyttämään seuraava kysymys
 
 // functiolla näytetään seuraava kysymys arrysta domiin
 
@@ -165,22 +164,22 @@ function NextQuestion(index) {
     handleQuestions()
     const currentQuestion = shuffledQuestions[index]
     document.getElementById("question-number").innerHTML = questionNumber
-    document.getElementById("player-score").innerHTML = pelaajanPisteet
+    document.getElementById("player-score").innerHTML = playerScore
     document.getElementById("display-question").innerHTML = currentQuestion.question;
     document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
     document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
     document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
     document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
+    document.getElementById("pisteet").style.display = "none";
 
 }
 
 
 function checkForAnswer() {
-    const currentQuestion = shuffledQuestions[indexNumber] // Hakee nykyisen kysymyksen
-    const currentQuestionAnswer = currentQuestion.correctOption // Hakee oikean vastauksen kysymykselle
-    const options = document.getElementsByName("option"); // Hakee kaikki elementit minkä nimi on option.
+    const currentQuestion = shuffledQuestions[indexNumber] // hakee nykyisen kysymyksen
+    const currentQuestionAnswer = currentQuestion.correctOption //hakee nykyisen kysymyksen vastauksen
+    const options = document.getElementsByName("option"); // hakee kaikki elementit millä id: option
     let correctOption = null
-    let button = document.getElementById("btn"); // Haetaan buttonin ID piilotusta varten.
 
     options.forEach((option) => {
         if (option.value === currentQuestionAnswer) {
@@ -189,18 +188,18 @@ function checkForAnswer() {
         }
     })
 
-    // Varmistaa että radiobutton on checked tai vaihtoehto valittu
+    //checking to make sure a radio input has been checked or an option being chosen
     if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
         document.getElementById('option-modal').style.display = "flex"
     }
 
-    //Onko radio button sama kuin oikea vastaus.
+    // Varmistaa että radiobutton on checked tai vaihtoehto valittu
     options.forEach((option) => {
         if (option.checked === true && option.value === currentQuestionAnswer) {
             document.getElementById(correctOption).style.backgroundColor = "green"
-            pelaajanPisteet++ // Lisätään pisteitä tulokseen
-            indexNumber++ //Lisätään indexiin 1 jotta näytetään uusi kysymys
-            // Viive ennenkuin näytetään seuraava kysymys.
+            playerScore++ //lisätään pisteisiin 1
+            indexNumber++ //lisätään indexiin 1
+            //Viive ennen kuin näytetään uusi kysymys
             setTimeout(() => {
                 questionNumber++
             }, 1500)
@@ -210,14 +209,17 @@ function checkForAnswer() {
             const wrongLabelId = option.labels[0].id
             document.getElementById(wrongLabelId).style.backgroundColor = "red"
             document.getElementById(correctOption).style.backgroundColor = "green"
-            VääriäYrityksiä++ // Lisää väärin vastattuihin 1. 
+            wrongAttempt++ //lisätään 1 väärin vastauksiin jos vastaus väärä.
             indexNumber++
+
+            let button = document.getElementById("btn");
             button.classList.add("hide"); // Piilotetaan seuraava kysymys nappi
-/*          let modalpopup = document.getElementById('option-modal');
-            modalpopup.style.display = "flex"; // Tuodaan modal popup näkyviin kun väärä vastaus.
-            document.getElementById("modalText").innerText = "Väärä vastaus." */
             document.getElementById("display-question").innerHTML = "Väärä vastaus"; // vaihdetaan modalin tekstiksi Väärä vastaus
             
+            // viive
+            setTimeout(() => {
+                questionNumber++
+            }, 1500)
         }
     })
 }
@@ -232,20 +234,20 @@ function handleNextQuestion() {
     // Viive näyttämään seuraava kysymys.
     setTimeout(() => {
         if (indexNumber <= 9) {
-// Näyttää uuden kysymyksen jos index numero on pienempi kuin 9.
+//// Näyttää uuden kysymyksen jos index numero on pienempi kuin 9.
             NextQuestion(indexNumber)
+
             let button = document.getElementById("btn");
             button.classList.remove("hide"); // palauttaa tarkista napin näkyville
-            
         }
         else {
-            handleEndGame()//Lopettaa pelin jos index numero on yli 9
+            handleEndGame()// lopettaa pelin jos index > 9 eli 10 kysymystä on kysytty
         }
         resetOptionBackground()
     }, 1500);
 }
 
-// vaihtaa vaihtoehtojen backgroundin takaisin kun on näytetty oikein väärin värit
+// resetoi backgroundin värit
 function resetOptionBackground() {
     const options = document.getElementsByName("option");
     options.forEach((option) => {
@@ -253,7 +255,7 @@ function resetOptionBackground() {
     })
 }
 
-// poistaa valinnat vaihtoehdoista seuraavaa kysymystä varten.
+// poistaa valinnat kaikista radio buttoneista kun uusi kysymys näytetään.
 function unCheckRadioButtons() {
     const options = document.getElementsByName("option");
     for (let i = 0; i < options.length; i++) {
@@ -261,52 +263,49 @@ function unCheckRadioButtons() {
     }
 }
 
-// Pelin lopetus funktio
+// Lopetuksen händläys functio
 function handleEndGame() {
-    SuljeScoreModal();
-    let arvio = null;
-    let arviokColor = null;
+    let remark = null
+    let remarkColor = null
 
-    // pisteiden tarkistuksen perusteella tuleva väri ja lausahdus.
-    if (pelaajanPisteet <= 3) {
-        arvio = "Hups aika vähän oikein lisää harjoitusta kyllä se siitä!.";
-        arvioColor = "red";
+    // Arvosana taulut
+    if (playerScore <= 3) {
+        remark = "Hups lisää harjoitusta kaivataan."
+        remarkColor = "red"
     }
-    else if (pelaajanPisteet >= 4 && pelaajanPisteet < 7) {
-        arvio = "Keskiverto suoritus pystyt kyllä parempaan!.";
-        arvioColor = "orange";
+    else if (playerScore >= 4 && playerScore < 7) {
+        remark = "Keskiverto suoritus, pystyt kyllä parempaan."
+        remarkColor = "orange"
     }
-    else if (pelaajanPisteet >= 7) {
-        arvio = "Hienoa työtä jatka samaan malliin!!.";
-        arvioColor = "green";
+    else if (playerScore >= 7) {
+        remark = "Hienoa työtä jatka samaan malliin."
+        remarkColor = "green"
     }
-    const pelajanArvosana = (pelaajanPisteet / 10) * 100
+    const playerGrade = (playerScore / 10) * 100
 
-    // score boardin näyttämiseen tarvittavat.
-    document.getElementById('arvios').innerHTML = arvio;
-    document.getElementById('arvios').style.color = arvioColor;
-    document.getElementById('grade-percentage').innerHTML = pelajanArvosana;
-    document.getElementById('wrong-answers').innerHTML = VääriäYrityksiä;
-    document.getElementById('right-answers').innerHTML = pelaajanPisteet;
-    document.getElementById('score-modal').style.display = "flex";
+    // score boardin tarvittavat elementit.
+    document.getElementById("remarks").innerHTML = remark;
+    document.getElementById("remarks").style.color = remarkColor;
+    document.getElementById("grade-percentage").innerHTML = playerGrade;
+    document.getElementById("wrong-answers").innerHTML = wrongAttempt;
+    document.getElementById("right-answers").innerHTML = playerScore;
+    document.getElementById("score-modal").style.display = "flex";
 
 }
 
-// sulkee score modalin ja sekoittaa kysymykset uudestaan.
-function SuljeScoreModal() {
+//closes score modal, resets game and reshuffles questions
+function closeScoreModal() {
     questionNumber = 1
-    pelaajanPisteet = 0
-    VääriäYrityksiä = 0
+    playerScore = 0
+    wrongAttempt = 0
     indexNumber = 0
     shuffledQuestions = []
     NextQuestion(indexNumber)
     document.getElementById('score-modal').style.display = "none"
 }
 
-// Funktio millä piilotetaan varoitus modal.
+//function to close warning modal
 function closeOptionModal() {
     document.getElementById('option-modal').style.display = "none"
 }
-
-
-// tehtävässä lainattu raakalla kädellä myönnettäköön sivustoa "https://dev.to/sulaimonolaniran/building-a-simple-quiz-with-html-css-and-javascript-4elp"
+//  "https://dev.to/sulaimonolaniran/building-a-simple-quiz-with-html-css-and-javascript-4elp"
