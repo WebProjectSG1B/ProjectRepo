@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Sono";
-    src: url(/ProjectRepo/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
+    src: url(../../Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
   }
 *{
     margin: 0;
@@ -10,12 +10,6 @@
 
 html, body{
     height: 100%;
-}
-
-
-body{
-    font-family: 'Montserrat', serif;
-
 }
 
 main{
@@ -33,7 +27,7 @@ main{
 .game-quiz-container{
     width: 40rem;
     color: black;
-    height: 30rem;
+    height: 20rem;
     background-color: lightgray;
     display: flex;
     flex-direction: column;
@@ -289,7 +283,6 @@ input[type=radio]:checked ~ .option {
     to {opacity: 1;}
   }
 
-  @charset "UTF-8";
 /* 
 YLEINEN TYYLITTELY ALKAA
 
@@ -308,14 +301,14 @@ VÄRIKOODIT
 body {
   font-family: "Sono";
   font-weight: 500;
-  background-image: url(/ProjectRepo/Index/Images/black-g4ec6f0509_1920.jpg);
+  background-image: url(../../Index/Images/black-g4ec6f0509_1920.jpg);
   color: white;
   width: 99vw;
 }
 
 #nomargin {
   margin: 0;
-  background-image: url(/ProjectRepo/Index/Images/puuHeader.jpg);
+  background-image: url(../../Index/Images/puuHeader.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-decoration: underline;
@@ -333,7 +326,7 @@ body {
     margin-left: 0;
     background-image: url(../../Index/Images/puuHeader.jpg);
     z-index: 0;
-    justify-content: flex-end;
+    justify-content: center;
     color: black;
     font-weight: bolder;
 }
@@ -365,7 +358,7 @@ h1, p {
 }
 
 .offcanvas {
-  background-image: url(/Index/Images/workplace-g4e36d3dde_1920.jpg);
+  background-image: url(../../Images/workplace-g4e36d3dde_1920.jpg);
   background-size: cover;
   color: black;
 }
@@ -391,23 +384,11 @@ h1, p {
   width: 100vw;
 }
 
-#footer {
-  padding-bottom: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-}
 
 .col5 {
   position: absolute;
 }
 
-#footer {
-  border: 2px solid black;
-  border-radius: 5px;
-  background-color: rgba(15, 102, 168, 0.7098039216);
-  margin-bottom: 2px;
-  padding-left: 90vw;
-}
 
 h1 {
   padding-left: 0;
