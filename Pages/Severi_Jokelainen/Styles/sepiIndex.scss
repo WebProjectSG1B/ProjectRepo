@@ -43,12 +43,23 @@
     margin-left: 0;
     justify-content: center;
     z-index: 0;
-    background-image: url(/Index/Images/puuHeader.jpg);
+    background-image: url(../../../Index/Images/puuHeader.jpg);
     background-repeat: none;
   }
 #nomargin {
   margin: 0;
   padding-top: 0.1vh;
+}
+.homebutton {
+    font-size: 40px;
+    position: absolute;
+    left: 45vh;
+        &:hover {
+            cursor: pointer;
+        }
+        @media screen and (max-width: 950px) {
+            display: none;
+        }
 }
 // Karusellin tyylit
 .carousel {
