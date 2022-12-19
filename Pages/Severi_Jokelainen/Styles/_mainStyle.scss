@@ -34,6 +34,11 @@ h1, p {
 .headertext, table {
     background-color: rgba(0, 0, 0, 0.479) ;
 }
+@media screen and (max-width: 915px){
+    .headertext~p{
+        display: none;
+    }
+}
 .col {
     border-radius: 5px;
     background-color: $mainColor;
@@ -61,8 +66,9 @@ h1, p {
 .row3 {
     justify-content: center;
 }
-
-
+#navigaatio {
+    z-index: 3;
+}
 // Navigaatiopalkin ikoneiden tyylit (lähde:https://fonts.google.com/icons)
 .NaviLinks h4{
     display: flex;

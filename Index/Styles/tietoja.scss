@@ -31,8 +31,7 @@ body {
   background-image: url(../Images/puuHeader.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-text-decoration: underline white dotted;
-          text-decoration: underline white dotted;
+  text-decoration: underline white dotted;
   padding-top: 0.1vh;
 }
 
@@ -47,11 +46,9 @@ body {
   top: 1vh;
   margin-right: 5px;
 }
-
 #menubutton:hover {
   color: #0f66a8;
 }
-
 a {
   text-decoration: none;
   color: white;
@@ -73,7 +70,6 @@ h1, p {
   background-size: cover;
   color: black;
 }
-
 .offcanvas h4 {
   color: black;
 }
@@ -101,7 +97,8 @@ h1, p {
   margin-bottom: 0;
   margin-left: 0;
   position: absolute;
-  overflow-y: scroll;
+    
+    overflow-y: scroll;
 }
 
 .col5 {
@@ -118,10 +115,10 @@ h1, p {
   scrollbar-width: none;
   justify-content: center;
 }
-
-#footer::-webkit-scrollbar {
+#footer::-webkit-scrollbar{
   display: none;
 }
+
 
 h1 {
   padding-left: 0;
@@ -131,7 +128,6 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-
 .NaviLinks h4:hover {
   color: #0f66a8;
 }
@@ -140,51 +136,48 @@ h1 {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
   font-size: 30px;
 }
-
-td {
+td{
   color: white;
 }
-
 table {
-  background-color: rgba(0, 0, 0, 0.479);
+  background-color: rgba(0, 0, 0, 0.479) ;
   border-radius: 5px;
 }
-
 /*# sourceMappingURL=style.css.map */
-.row5 {
+.row5{
   width: 100vw;
 }
 
-@media screen and (max-width: 300px) {
-  #menubutton {
-    font-size: 2em;
+@media screen and (max-width: 300px){
+  #menubutton{
+      font-size: 2em;
   }
 }
+
 @media screen and (max-width: 500px) {
-  #menubutton {
-    top: 0.1vh;
-    left: 2vw;
-  }
+  #menubutton{
+      top: 0.1vh;
+      left: 2vw;
+    }   
 }
-@media screen and (max-width: 700px) {
-  #menubutton {
+
+@media screen and (max-width: 700px){
+  #menubutton{
     top: 0.2vh;
     left: 2vw;
   }
 }
-.row3 {
-  height: 25vh;
-}
 
-.row4 {
-  height: 25vh;
+.row3{
+    height: 25vh;
 }
-
+.row4{
+    height: 25vh;
+}
 #menubutton:hover {
-  color: #0f66a8;
+  color:#0f66a8;
 }
-
-#koti-icon {
+#koti-icon{     
   font-size: 3em;
   top: 1vh;
   position: absolute;
@@ -192,51 +185,48 @@ table {
   margin-right: 1vw;
 }
 
+// Tietolaatikkojen muotoilu
 .sepi, .msaed, .samuli, .matti, .leevi {
-  border: none;
-  padding: 0;
+    border: none;
+    padding: 0;
+            p {
+            background-color: rgba(0, 0, 0, 0.533);
+            height: 100%;
+            width: 100%;
+            padding: 2px;
+        }
 }
-.sepi p, .msaed p, .samuli p, .matti p, .leevi p {
-  background-color: rgba(0, 0, 0, 0.533);
-  height: 100%;
-  width: 100%;
-  padding: 2px;
-}
-
 .sepi {
-  background-image: url(../../Pages/Severi_Jokelainen/Images/decimal.jpg);
-  background-repeat: none;
-  background-position-x: 60vh;
-  background-position-y: 60vh;
+    background-image: url(../../Pages/Severi_Jokelainen/Images/decimal.jpg);
+    background-repeat: none;
+    background-position-x: 60vh;
+    background-position-y: 60vh;
 }
-
 .matti {
-  background-image: url(../Images/1-2-luokka_aidinkieli_image_by_mahesh_patel_from_pixabay.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url(../Images/1-2-luokka_aidinkieli_image_by_mahesh_patel_from_pixabay.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 .samuli {
-  background-image: url(../Images/5-luokka_eurooppapeli.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+    background-image: url(../Images/5-luokka_eurooppapeli.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
 .msaed {
-  background-image: url(../Images/4-luokka.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url(../Images/4-luokka.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 .leevi {
-  background-image: url(../Images/kuvapeli_3-luokkalaiset.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: -25vh;
+    background-image: url(../Images/kuvapeli_3-luokkalaiset.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -25vh;
 }
 
 .info {
-  background-color: rgba(15, 102, 168, 0.8470588235);
-  border: rgba(15, 102, 168, 0.5960784314) solid 2px;
-  border-radius: 10px;
-}/*# sourceMappingURL=tietoja.css.map */
+    background-color: #0f66a8d8;
+    border: #0f66a898 solid 2px;
+    border-radius: 10px;
+}

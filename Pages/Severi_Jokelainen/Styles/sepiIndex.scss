@@ -73,6 +73,7 @@
   }
   .carousel-indicators {
     height: 5px;
+    z-index: 0;
         // NÄÄ ON NE NAPIT
         [data-bs-target]{ 
             background-color: $accentColor;

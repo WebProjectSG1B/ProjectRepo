@@ -33,6 +33,11 @@ h1, p {
   background-color: rgba(0, 0, 0, 0.479);
 }
 
+@media screen and (max-width: 915px) {
+  .headertext ~ p {
+    display: none;
+  }
+}
 .col {
   border-radius: 5px;
   background-color: #0f66a8;
@@ -60,6 +65,10 @@ h1, p {
 
 .row3 {
   justify-content: center;
+}
+
+#navigaatio {
+  z-index: 3;
 }
 
 .NaviLinks h4 {
@@ -290,6 +299,7 @@ h1, p {
 }
 .carousel .carousel-indicators {
   height: 5px;
+  z-index: 0;
 }
 .carousel .carousel-indicators [data-bs-target] {
   background-color: #3EA2F0;
