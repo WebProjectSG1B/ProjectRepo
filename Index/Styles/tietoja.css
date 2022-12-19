@@ -31,7 +31,7 @@ body {
   background-image: url(../Images/puuHeader.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  text-decoration: underline;
+  text-decoration: underline white dotted;
   padding-top: 0.1vh;
 }
 
@@ -46,13 +46,12 @@ body {
   top: 1vh;
   margin-right: 5px;
 }
-
+#menubutton:hover {
+  color: #0f66a8;
+}
 a {
   text-decoration: none;
   color: white;
-}
-a:hover {
-  color: #F05A56;
 }
 
 h1, p {
@@ -138,9 +137,11 @@ h1 {
   font-size: 30px;
 }
 td{
-  color: black;
-  font-weight: bolder;
-  text-decoration:underline
+  color: white;
+}
+table {
+  background-color: rgba(0, 0, 0, 0.479) ;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=style.css.map */
 .row5{
