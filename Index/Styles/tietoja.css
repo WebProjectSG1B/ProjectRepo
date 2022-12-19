@@ -16,7 +16,7 @@ VÄRIKOODIT
 
 @font-face {
   font-family: "Sono";
-  src: url(/Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
+  src: url(../../Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
 }
 body {
   font-family: "Sono";
