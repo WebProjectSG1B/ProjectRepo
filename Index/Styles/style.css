@@ -11,7 +11,14 @@ VÄRIKOODIT
 
 */
 .row2 {
-  margin-top: 10vh;
+  margin-top: 8vh;
+  height: 80px;
+}
+.infotext {
+  height: 50px;
+}
+.infotext p {
+  font-size: 0.9em;
 }
 
 @font-face {
@@ -86,19 +93,9 @@ h1, p {
   margin: 30px;
 }
 
-.row4 {
-  justify-content: center;
-}
-
 #navigaatio {
   padding-bottom: 20vh;
   width: 100vw;
-}
-
-#footer {
-  padding-bottom: 0;
-  margin-bottom: 0;
-  margin-left: 0;
 }
 
 .col5 {
@@ -134,13 +131,6 @@ body::-webkit-scrollbar{
   display: none;
 }
 
-.row3{
-  height: 25vh;
-}
-.row4{
-  height: 25vh;
-}
-
 h1 {
   padding-left: 0;
 }
@@ -163,4 +153,43 @@ td{
 table {
   background-color: rgba(0, 0, 0, 0.479) ;
   border-radius: 5px;
+}
+
+/* Index-kuvalinkkien tyylit */
+
+.img-fluid{
+  height: 210px;
+  width: 210px;
+  border: solid black 1.3px;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.col3, .col4{
+  position: relative;
+  border: none;
+  margin: 10px;
+  background-color:inherit;
+  max-width: 210px;
+}
+.bottom{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  font-size: 1.3rem;
+  transform: translate(-50%, -50%);
+  text-shadow: 3px 3px 3px black
+}
+
+.img-fluid:hover {
+  border: 10px solid #0f66a8;
 }
