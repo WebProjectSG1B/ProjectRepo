@@ -1,0 +1,77 @@
+
+body {
+    font-family: "Sono";
+    font-weight: 500;
+    background-image: url(b.jpg);
+    color: white;
+    width: 90vw;
+    }
+    
+    #kyksi img{
+      height: 80px;
+      width: 80px;
+    }
+    
+    #ktoinen img {
+      height: 80px;
+      width: 80px;
+    }
+    
+    #kkolmas img {
+      height: 80px;
+      width: 80px;
+    }
+    
+    #kneljas img {
+      height: 80px;
+      width: 80px;
+    }
+    
+    #kviides img {
+      height: 80px;
+      width: 80px;
+    }
+    
+    #tehtävä {
+      border: 2px solid black;
+      border-radius: 10px;
+    }
+    .yksi, .toinen, .kolmas, .neljas, .viides{
+        padding: 30px 10px 0px 100px;
+    }
+    
+    
+    #vastaukset{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #0f66a8;
+    margin: 30px;
+    display: flex;
+    justify-content: center
+    }
+    
+    #container {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    header {
+      display: flex;
+      align-items: center;
+      border: 2px solid black;
+      border-radius: 2px;
+      justify-content: space-around;
+      background-image: url(puu.jpg);
+    }
+    #tehtävä{
+    background-image: url(forest-5202251.png);
+    }
+    button{
+    background-color: #0f66a8;
+    
+    }
+        
+    
+    
+    /*# sourceMappingURL=style.css.map */
+    
