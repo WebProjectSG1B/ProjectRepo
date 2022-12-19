@@ -276,7 +276,8 @@ h1, p {
 .homebutton {
   font-size: 40px;
   position: absolute;
-  left: 45vh;
+  left: 22vh;
+  top: 2vh;
 }
 .homebutton:hover {
   cursor: pointer;
