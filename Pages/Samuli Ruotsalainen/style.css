@@ -66,8 +66,7 @@ VARIKOODIT
     background-image: url(../../Index/Images/puuHeader.jpg);
     z-index: 0;
     justify-content: center;
-    color: black;
-    font-weight: bolder;
+   
 }
 #quiz-container {
     margin-top: 20vh;
@@ -194,6 +193,21 @@ h1, p {
 #startcontainer{
     width: 100vw;
 }
+#koti-icon{     
+    font-size: 3em;
+    top: 1vh;
+    position: absolute;
+    right: 1vh;
+    margin-right: 1vw;
+}
+td{
+    color: white;
+  }
+  table {
+    background-color: rgba(0, 0, 0, 0.479) ;
+    border-radius: 5px;
+  }
+
 @media screen and (max-width:1440px) {
     .row2{
         margin: 0;
@@ -264,10 +278,3 @@ h1, p {
     }
 }
 
-#koti-icon{     
-    font-size: 3em;
-    top: 1vh;
-    position: absolute;
-    right: 1vh;
-    margin-right: 1vw;
-}
