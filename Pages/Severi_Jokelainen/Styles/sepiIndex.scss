@@ -1,11 +1,11 @@
+// Severi Jokelainen/Web-projekti 12/2022
+
 @import "./variables";
 @import "./mainStyle";
 @import './modaaal';
 
-// Color variables
-
 /* Sepin index */
-
+// Linkkinä toimivien kuvien tyylittelyt, kuvien lähde: pixabay.com
 .links {
     height: 250px;
     background: none;
@@ -17,6 +17,9 @@
     &:hover {
         cursor: pointer;
         color: $accentColor;
+    }
+    @media screen and (max-width: 530px) {
+        font-size: 0.7em;
     }
 }
 .col-4 {
@@ -31,8 +34,8 @@
 .row2 {
     justify-content: center;
 }
-
-#footer {
+// Footerin ja headerin tyylit
+#footer, #nomargin {
     border: 2px solid black;
     border-radius: 5px;
     background-color: $mainColor;
@@ -40,13 +43,14 @@
     margin-left: 0;
     justify-content: center;
     z-index: 0;
+    background-image: url(/Index/Images/puuHeader.jpg);
+    background-repeat: none;
   }
-
 #nomargin {
   margin: 0;
   padding-top: 0.1vh;
 }
-
+// Karusellin tyylit
 .carousel {
   margin-top: 25vh;
   font-size: large;
@@ -70,13 +74,7 @@
 }
 
 
-
 @media screen and (max-width: 767px){
-    .links {
-        img {
-            display: none;
-        }
-    }
     .col-3 {
         width: 80%;
         height: auto;
@@ -84,9 +82,6 @@
         p {
             position: relative;
             top: 0%;
-        }
-        img {
-            display: none;
         }
     }
 }
