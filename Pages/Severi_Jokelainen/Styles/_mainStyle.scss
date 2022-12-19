@@ -51,8 +51,11 @@ h1, p {
 #menubutton {
     font-size: 3em;
     position: absolute;
-    top: 1vh;
+    top: 0.8vh;
     margin-right: 5px;
+        &:hover {
+            color: $mainColor;
+        }
   }
 
 .row3 {
