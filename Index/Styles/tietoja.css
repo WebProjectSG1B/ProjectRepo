@@ -173,3 +173,13 @@ td{
 .row4{
     height: 25vh;
 }
+#menubutton:hover {
+  color:#0f66a8;
+}
+#koti-icon{     
+  font-size: 3em;
+  top: 1vh;
+  position: absolute;
+  right: 1vh;
+  margin-right: 1vw;
+}
