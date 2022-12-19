@@ -218,6 +218,9 @@ td{
           top: 0.2vh;
           left: 2vw;
         }
+        #start-button{
+            margin-top: 15%;
+        }
     }
     @media screen and (max-width: 500px) {
         #start-button{
@@ -244,6 +247,11 @@ td{
             display: none;
         }
     }
+    @media screen and (max-height: 1440px) and (min-width:678px){
+        #start-button{
+            margin-top: 15;
+        }
+    }
     @media screen and (max-height: 730px) and (min-width:1200px){
         #footer{
             display: none;
@@ -255,7 +263,7 @@ td{
         }
        
         .btnResponsiveSize{
-            margin-top: 15%;
+            margin-top: 20%;
         }
     }
     @media screen and (max-height: 560px){
@@ -264,6 +272,9 @@ td{
         }
         #quiz-container{
             margin-top: 12vh;
+        }
+        #start-button{
+            margin-top: 20%;
         }
     }
     @media screen and (max-height:677px) and (max-width:375px){
@@ -274,6 +285,11 @@ td{
     @media screen and (max-height:800px) and (max-width:400px){
         #footer{
             display: none;
+        }
+    }
+    @media screen and (max-height:720px) and (min-width:1200px){
+        #start-button{
+            margin-top: 15%;
         }
     }
 }

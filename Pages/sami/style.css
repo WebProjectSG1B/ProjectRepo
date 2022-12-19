@@ -74,6 +74,12 @@ body {
     background-color: #0f66a8;
     
     }
+    .else{
+      color: rgb(255, 0, 0);
+    }
+    .if{
+      color: rgb(12, 254, 12);
+    }
         
     
     

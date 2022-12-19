@@ -4,8 +4,10 @@ function yksi (){
     let vas = "panther";
         if (input == vas){
         vastaus.innerHTML = "OIKEIN";
+        vastaus.classList.add('if')
             }else{
             vastaus.innerHTML = "VÄÄRIN";
+            vastaus.classList.add('else')
             }
 }
 function toinen(){
@@ -14,9 +16,12 @@ function toinen(){
     let vas2 = "elephant";
     if (input2 == vas2){
         vastaus2.innerHTML = "OIKEIN";
+        vastaus2.classList.add('if')
         
         }else{
         vastaus2.innerHTML = "VÄÄRIN";
+        vastaus2.classList.add('else')
+       
     }
 }
 function kolmas (){
@@ -25,9 +30,11 @@ function kolmas (){
     let vas3 = "giraffe";
     if (input3 == vas3){
         vastaus3.innerHTML = "OIKEIN";
+        vastaus3.classList.add('if')
         
         }else{
         vastaus3.innerHTML = "VÄÄRIN";
+        vastaus3.classList.add('else')
     }
 }
 function neljas (){
@@ -36,9 +43,11 @@ function neljas (){
     let vas4 = "bear";
     if (input4 == vas4){
         vastaus4.innerHTML = "OIKEIN";
+        vastaus4.classList.add('if')
         
         }else{
         vastaus4.innerHTML = "VÄÄRIN";
+        vastaus4.classList.add('else')
     }
 
 }
@@ -48,9 +57,11 @@ function viides (){
     let vas5 = "cat";
     if (input5 == vas5){
         vastaus5.innerHTML = "OIKEIN";
+        vastaus5.classList.add('if')
         
         }else{
         vastaus5.innerHTML = "VÄÄRIN";
+        vastaus5.classList.add('else')
     }
 
 }
