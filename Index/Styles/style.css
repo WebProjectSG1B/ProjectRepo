@@ -21,14 +21,14 @@ VÄRIKOODIT
 body {
   font-family: "Sono";
   font-weight: 500;
-  background-image: url(../Images/black-g4ec6f0509_1920.jpg);
+  background-image: url(/Index/Images/black-g4ec6f0509_1920.jpg);
   color: white;
   width: 99vw;
 }
 
 #nomargin {
   margin: 0;
-  background-image: url(../Images/puuHeader.jpg);
+  background-image: url(/Index/Images/puuHeader.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-decoration: underline;
@@ -36,7 +36,7 @@ body {
 }
 
 #footer {
-  background-image: url(../Images/puuHeader.jpg);
+  background-image: url(/Index/Images/puuHeader.jpg);
   z-index: 0;
 }
 
@@ -67,7 +67,7 @@ h1, p {
 }
 
 .offcanvas {
-  background-image: url(../Images/workplace-g4e36d3dde_1920.jpg);
+  background-image: url(/Index/Images/workplace-g4e36d3dde_1920.jpg);
   background-size: cover;
   color: black;
 }
@@ -97,9 +97,6 @@ h1, p {
   padding-bottom: 0;
   margin-bottom: 0;
   margin-left: 0;
-  position: absolute;
-    
-    overflow-y: scroll;
 }
 
 .col5 {
@@ -111,15 +108,8 @@ h1, p {
   border-radius: 5px;
   background-color: rgba(15, 102, 168, 0.7098039216);
   margin-bottom: 2px;
-  height: 15vh;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  justify-content: center;
+  padding-left: 90vw;
 }
-#footer::-webkit-scrollbar{
-  display: none;
-}
-
 
 h1 {
   padding-left: 0;
@@ -136,33 +126,4 @@ h1 {
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
   font-size: 30px;
-}
-td{
-  color: black;
-  font-weight: bolder;
-  text-decoration:underline
-}
-/*# sourceMappingURL=style.css.map */
-.row5{
-  width: 100vw;
-}
-
-@media screen and (max-width: 300px){
-  #menubutton{
-      font-size: 2em;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  #menubutton{
-      top: 0.1vh;
-      left: 2vw;
-    }   
-}
-
-@media screen and (max-width: 700px){
-  #menubutton{
-    top: 0.2vh;
-    left: 2vw;
-  }
-}
+}/*# sourceMappingURL=style.css.map */
