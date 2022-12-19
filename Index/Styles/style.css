@@ -46,7 +46,9 @@ body {
   top: 1vh;
   margin-right: 5px;
 }
-
+#menubutton:hover {
+  color:#0f66a8;
+}
 a {
   text-decoration: none;
   color: white;
