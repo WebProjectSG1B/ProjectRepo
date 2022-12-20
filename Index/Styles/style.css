@@ -92,7 +92,12 @@ h1, p {
   background-color: #0f66a8;
   margin: 30px;
 }
+@media screen and (max-width: 775px) {
+     .infotext{
+        display: none;
+     }
 
+}
 #navigaatio {
   padding-bottom: 20vh;
   width: 100vw;
