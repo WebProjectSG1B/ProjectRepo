@@ -47,7 +47,7 @@ const questions = [
             {text: 'Lati', correct: false}
         ],
         vinkit: 
-           'Slovakia käyttää rahayksikkönään euroja.'
+           'Slovakia on EU-maa ja käyttää rahayksikkönään euroja.'
     },
     {
         kysymys: 'Missä kaupungissa on YK:n kansainvälisen rikostuomioistuimen päämaja?',
@@ -108,7 +108,7 @@ const questions = [
             {text: 'Puolalla', correct:false},
             {text: 'Ranskalla', correct:false}
         ],
-        vinkit: 'Saksalla on euroarlamentissä eniten paikkoja, sillä sen väkiluku on EU -maista suurin.'
+        vinkit: 'Saksalla on europarlamentissa eniten paikkoja, sillä sen väkiluku on EU -maista suurin.'
     },
     {
         kysymys: 'Mitkä ovat Euroopan unionin lipun värit?',
@@ -124,7 +124,7 @@ const questions = [
         kysymys: 'Mille maalle kuuluvat Shetlannin saaret?',
         vastaukset:[
             {text: 'Alankomaille', correct:false},
-            {text: 'Ruotsaille', correct:false},
+            {text: 'Ruotsille', correct:false},
             {text: 'Ranskalle', correct:false},
             {text: 'Isolle-Britannialle', correct:true}
         ],
@@ -159,6 +159,46 @@ const questions = [
             {text: 'Ranska', correct:false}
         ],
         vinkit: 'Tanskalla ja Belgialla ei ole yhteistä maa- tai merirajaa, jonka vuoksi Tanska ei ole Belgian naapurimaa.'
+    },
+    {
+        kysymys: 'Mikä maa näyttää saappaalta kartoissa?',
+        vastaukset:[
+            {text: 'Italia', correct:true},
+            {text: 'Espanja', correct:false},
+            {text: 'Egypti', correct:false},
+            {text: 'Israel', correct:false}
+        ],
+        vinkit: 'Italia on tunnettu sen saappaan muotoisesta ulkonäöstä kartoissa.'
+    },
+    {
+        kysymys: 'Minkä maan pääkaupuingissa sijaitsee Eiffel-torni?',
+        vastaukset:[
+            {text: 'Pariisi', correct:false},
+            {text: 'Saksa', correct:false},
+            {text: 'Ranska', correct:true},
+            {text: 'Hollanti', correct:false}
+        ],
+        vinkit: 'Eiffel-torni sijaitsee Ranskan pääkaupungissa, jonka nimi on Pariisi.'
+    },
+    {
+        kysymys: 'Mikä seuraavista valtioista on Suomen läntinen rajanaapuri?',
+        vastaukset:[
+            {text: 'Venäjä', correct:false},
+            {text: 'Viro', correct:false},
+            {text: 'Islanti', correct:false},
+            {text: 'Ruotsi', correct:true}
+        ],
+        vinkit: 'Suomen läntinen rajanaapuri on Ruotsi.'
+    },
+    {
+        kysymys: 'Mikä seuraavista EI ole osa Yhdistyneitä kuningaskuntia?',
+        vastaukset:[
+            {text: 'Wales', correct:false},
+            {text: 'Englanti', correct:false},
+            {text: 'Skotlanti', correct:false},
+            {text: 'Irlanti', correct:true}
+        ],
+        vinkit: 'Irlanti on itsenäinen valtio, eikä osa Yhdistyneitä kuningaskuntia. Pohjois-Irlanti kuuluu Yhdistyneisiin kuningaskuntiin.'
     }
 ];
 
