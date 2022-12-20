@@ -1,0 +1,205 @@
+@charset "UTF-8";
+/* 
+YLEINEN TYYLITTELY ALKAA
+
+VÄRIKOODIT 
+#0F66A8  footer nav background ehdotus
+#F05A56  
+#3EA2F0  background color ehdotus
+#ECF026
+#A1A322 
+
+*/
+
+.infotext p{
+  font-size: 1em;
+}
+
+@font-face {
+  font-family: "Sono";
+  src: url(../../Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
+}
+body {
+  font-weight: 500;
+  background-image: url(../../Index/Images/black-g4ec6f0509_1920.jpg);
+  color: white;
+  width: 99vw;
+}
+
+#nomargin {
+  margin: 0;
+  background-image: url(../../Index/Images/puuHeader.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 0.1vh;
+  max-height: 70px;
+}
+
+#footer {
+  background-image: url(../../Index/Images/puuHeader.jpg);
+  width: 100%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  margin-bottom: 2px;
+  height: 15vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  justify-content: center;
+}
+
+#menubutton {
+  font-size: 3em;
+  position: absolute;
+  top: 1vh;
+  margin-right: 5px;
+  color: #ECF026;
+}
+#menubutton:hover {
+  color:#A1A322;
+}
+a {
+  text-decoration: none;
+  color: #ECF026;
+}
+a:hover {
+  color: #A1A322;
+}
+
+h1, p {
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.offcanvas {
+  background-image: url(../../Index/Images/workplace-g4e36d3dde_1920.jpg);
+  background-size: cover;
+  color: black;
+}
+.offcanvas h4 {
+  color: black;
+}
+
+/* YLEINEN TYYLITTELY PÄÄTTYY */
+/* INDEXIN TYYLIT */
+.col, .col-4 {
+  text-align: left;
+  margin-top: 50%;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: #0f66a8;
+  margin: 30px;
+}
+
+#navigaatio {
+  padding-bottom: 20vh;
+  width: 100vw;
+}
+
+
+#footer{
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+#footer {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgba(15, 102, 168, 0.7098039216);
+  margin-bottom: 2px;
+  height: 15vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  justify-content: center;
+  
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+#footer::-webkit-scrollbar{
+  display: none;
+}
+
+h1 {
+  padding-left: 0;
+}
+
+.NaviLinks h4 {
+  display: flex;
+  justify-content: space-between;
+}
+.NaviLinks h4:hover {
+  color: #0f66a8;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-size: 30px;
+}/*# sourceMappingURL=style.css.map */
+td{
+  color: white;
+}
+table {
+  background-color: rgba(0, 0, 0, 0.479) ;
+  border-radius: 5px;
+}
+
+/* Tyylitykset Leevin setit */
+
+h1{
+  font-family: 'Luckiest Guy', cursive;
+  text-decoration: none;
+  color: #ECF026;
+  text-shadow: black 2px 2px 2px;
+}
+
+/*Kuvapeli-tyylitykset*/
+/*Kuvapeli-tyylitykset*/
+/*Kuvapeli-tyylitykset*/
+/*Kuvapeli-tyylitykset*/
+
+
+  
+  .buttons img{
+  width:200px;
+  border: black solid 1px;
+  margin: 0px;
+  }
+
+
+  #score {
+  color: #ffc107;
+  text-align: center;
+  font-size: 30px;
+  }
+  
+  #kysymykset {
+  font-family:inherit;
+  font-size: 30px;
+  color: #ffc107;;
+  }
+  
+  
+  #btn0, #btn1, #btn2, #btn3 {
+  padding: 0px;
+  font-size: 20px;
+  border: white 3px solid;
+  margin: 10px;
+  }
+
+  #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+  border:#ffc107 3px solid;
+  }
+  
+  #kysymyslaskuri {
+  color: white;
+  font-size: 30px;
+  }
+
+  #vaihtoehdot_kuvat{}
