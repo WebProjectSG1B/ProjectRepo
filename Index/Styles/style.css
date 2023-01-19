@@ -187,7 +187,7 @@ table {
   left: 50%;
   font-size: 1.3rem;
   transform: translate(-50%, -50%);
-  text-shadow: 3px 3px 3px black
+  text-shadow: 3px 3px 3px black;
 }
 
 .img-fluid:hover {
