@@ -10,15 +10,9 @@ VÄRIKOODIT
 #A1A322 
 
 */
-.row2 {
-  margin-top: 8vh;
-  height: 80px;
-}
-.infotext {
-  height: 50px;
-}
-.infotext p {
-  font-size: 0.80em;
+
+.infotext p{
+  font-size: 1em;
 }
 
 @font-face {
@@ -26,7 +20,6 @@ VÄRIKOODIT
   src: url(../../Pages/Fonts/Sono-VariableFont_MONO\,wght.ttf);
 }
 body {
-  font-family: "Sono";
   font-weight: 500;
   background-image: url(../../Index/Images/black-g4ec6f0509_1920.jpg);
   color: white;
@@ -35,16 +28,26 @@ body {
 
 #nomargin {
   margin: 0;
-  background-image: url(../Images/puuHeader.jpg);
+  background-image: url(../../Index/Images/puuHeader.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  text-decoration: white dotted underline;
   padding-top: 0.1vh;
+  max-height: 70px;
 }
 
 #footer {
-  background-image: url(../Images/puuHeader.jpg);
-  z-index: 0;
+  background-image: url(../../Index/Images/puuHeader.jpg);
+  width: 100%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  margin-bottom: 2px;
+  height: 15vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  justify-content: center;
 }
 
 #menubutton {
@@ -52,31 +55,27 @@ body {
   position: absolute;
   top: 1vh;
   margin-right: 5px;
+  color: #ECF026;
 }
 #menubutton:hover {
-  color:#0f66a8;
+  color:#A1A322;
 }
 a {
   text-decoration: none;
-  color: white;
+  color: #ECF026;
 }
 a:hover {
-  color: #F05A56;
+  color: #A1A322;
 }
 
 h1, p {
   text-align: center;
+  text-decoration: none;
 }
 
-.col {
-  border: 2px solid black;
-  border-radius: 5px;
-  background-color: #0f66a8;
-  margin: 30px;
-}
 
 .offcanvas {
-  background-image: url(../Images/workplace-g4e36d3dde_1920.jpg);
+  background-image: url(../../Index/Images/workplace-g4e36d3dde_1920.jpg);
   background-size: cover;
   color: black;
 }
@@ -87,30 +86,24 @@ h1, p {
 /* YLEINEN TYYLITTELY PÄÄTTYY */
 /* INDEXIN TYYLIT */
 .col, .col-4 {
+  text-align: left;
+  margin-top: 50%;
   border: 2px solid black;
   border-radius: 5px;
   background-color: #0f66a8;
   margin: 30px;
 }
-@media screen and (max-width: 775px) {
-     .infotext{
-        display: none;
-     }
 
-}
 #navigaatio {
   padding-bottom: 20vh;
   width: 100vw;
 }
 
-.col5 {
-  position: absolute;
-}
+
 #footer{
   padding-bottom: 0;
   margin-bottom: 0;
   margin-left: 0;
-  position: absolute;
   overflow-y: scroll;
   overflow-x: scroll;
 }
@@ -126,9 +119,6 @@ h1, p {
   
 }
 
-.row5{
-  width: 100vw;
-}
 body::-webkit-scrollbar{
   display: none;
 }
@@ -160,41 +150,56 @@ table {
   border-radius: 5px;
 }
 
-/* Index-kuvalinkkien tyylit */
+/* Tyylitykset Leevin setit */
 
-.img-fluid{
-  height: 210px;
-  width: 210px;
-  border: solid black 1.3px;
-  border-radius: 10px;
-  overflow: hidden;
-  opacity: 1;
-  display: block;
-  transition: .5s ease;
-  backface-visibility: hidden;
+h1{
+  font-family: 'Luckiest Guy', cursive;
+  text-decoration: none;
+  color: #ECF026;
+  text-shadow: black 2px 2px 2px;
 }
 
-.col3, .col4{
-  position: relative;
-  border: none;
+/*Kuvapeli-tyylitykset*/
+/*Kuvapeli-tyylitykset*/
+/*Kuvapeli-tyylitykset*/
+/*Kuvapeli-tyylitykset*/
+
+
+  
+  .buttons img{
+  width:200px;
+  border: black solid 1px;
+  margin: 0px;
+  }
+
+
+  #score {
+  color: #ffc107;
+  text-align: center;
+  font-size: 30px;
+  }
+  
+  #kysymykset {
+  font-family:inherit;
+  font-size: 30px;
+  color: #ffc107;;
+  }
+  
+  
+  #btn0, #btn1, #btn2, #btn3 {
+  padding: 0px;
+  font-size: 20px;
+  border: white 3px solid;
   margin: 10px;
-  background-color:inherit;
-  max-width: 210px;
-}
-.bottom{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 800;
-  color: white;
-  text-transform: uppercase;
-  margin: 0;
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  font-size: 1.3rem;
-  transform: translate(-50%, -50%);
-  text-shadow: 3px 3px 3px black;
-}
+  }
 
-.img-fluid:hover {
-  border: 10px solid #0f66a8;
-}
+  #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+  border:#ffc107 3px solid;
+  }
+  
+  #kysymyslaskuri {
+  color: white;
+  font-size: 30px;
+  }
+
+  #vaihtoehdot_kuvat{}

@@ -101,6 +101,20 @@ h1, p {
     transform: scale(1);
   }
 }
+.modalwrap1 {
+  background-image: url(../Images/prosentti.jpg);
+}
+
+.modalwrap2 {
+  background-image: url(../Images/decimal.jpg);
+}
+
+.modalwrap3 {
+  background-image: url(../Images/laskin.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .modalwrap {
   display: none;
   position: fixed;
@@ -127,6 +141,7 @@ h1, p {
   font-size: small;
   text-align: left;
   padding: 10px;
+  background-color: rgba(0, 0, 0, 0.774);
 }
 .modalwrap .modal-content p {
   font-size: large;
